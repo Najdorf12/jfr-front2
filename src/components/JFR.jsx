@@ -32,7 +32,7 @@ function JFR() {
         </nav>
         <Home />
         <Bio />
-        <div className="w-full h-[6vh] md:h-[20vh]"></div>
+        <div className="w-full h-[8vh] md:h-[20vh]"></div>
         <Dates />
         <Contact />
       </main>

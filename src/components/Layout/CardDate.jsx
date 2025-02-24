@@ -4,15 +4,15 @@ const CardDate = () => {
       <span className="text-stone-400 self-center w-[10%] pl-2 md:pl-[3%]">
         Lorem
       </span>
-      <div className="flex flex-col w-[70%] justify-center gap-3 pl-8 md:pl-[5%]">
-        <h6 className="text-xl xl:text-5xl">AZURE</h6>
+      <div className="flex flex-col w-[70%] justify-center gap-3 pl-9 md:pl-[5%]">
+        <h6 className=" text-2xl xl:text-5xl">AZURE</h6>
         <p className="text-sm ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
 
-      <div className="flex absolute right-6 gap-2 w-[20%] text-stone-400 text-nowrap justify-center items-center md:relative">
-        <i className="bx bxs-cube-alt text-2xl xl:text-4xl "></i>
+      <div className="flex absolute right-6 gap-2 w-[20%] text-stone-400 text-nowrap justify-center items-center md:relative lg:gap-3">
+        <i className="bx bxs-cube-alt text-2xl xl:text-3xl "></i>
         <p className="">20/04/2025</p>
       </div>
     </div>

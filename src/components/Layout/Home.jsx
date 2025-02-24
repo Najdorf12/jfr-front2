@@ -11,38 +11,38 @@ const Home = () => {
   const descriptionRef = useRef(null);
 
   useEffect(() => {
-    const timeline = gsap.timeline({
+    const tl = gsap.timeline({
       defaults: { duration: 1, ease: "power1.out" },
     });
 
-    /*   timeline.fromTo(
+    tl.fromTo(
       lineRef.current,
       { scaleX: 0, opacity: 0 },
       { scaleX: 1, opacity: 1, transformOrigin: "center" }
-    ); */
+    );
 
-    /*   timeline.fromTo(
+    tl.fromTo(
       lineRef2.current,
       { scaleX: 0, opacity: 0 },
       { scaleX: 1, opacity: 1, transformOrigin: "center" },
       "<"
     );
 
-    timeline.fromTo(
+    tl.fromTo(
       titleRef.current,
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, delay: 0.4 },
       "-=0.5"
     );
 
-    timeline.fromTo(
+    tl.fromTo(
       descriptionRef.current,
-s      { y: 15, opacity: 0 },
+      { y: 15, opacity: 0 },
       { y: 0, opacity: 1 },
       "-=0.01"
     );
 
-    gsap.fromTo(
+/*     gsap.fromTo(
       cardsRef.current,
       { y: 30, opacity: 0 },
       {
@@ -66,23 +66,27 @@ s      { y: 15, opacity: 0 },
         />
       </figure>
 
-      <article className="z-50 flex flex-col pl-3 pb-9 lg:pl-[2%] xl:pb-0">
+      <article className="z-50 flex flex-col pb-9 lg:pl-[2%] xl:pb-0">
         <figure className="">
-          <img src={navimg} alt="img-title" className="w-[50%] lg:w-[32%]" />
+          <img
+            src={navimg}
+            alt="img-title"
+            className="w-[65%] lg:w-[32%] ml-2"
+          />
         </figure>
 
-        <p className="ml-3 font-title text-sm  text-stone-400 text-balance max-w-[600px] xl:ml-6 xl:text-base">
+        <p className="ml-6 font-title text-sm text-stone-400 text-balance max-w-[600px] xl:ml-8 xl:text-base">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, nemo
           id eaque quasi cum deleniti repudiandae sunt numquam.
         </p>
-        <div className="flex gap-8 text-lg mt-9 lg:pl-[2%]">
-          <button className="border border-red-600 text-stone-500 rounded-full w-48 pl-4 pr-2 flex items-center justify-between shadow-md shadow-zinc-800">
+        <div className="flex items-center gap-6 md:gap-8 text-stone-500 font-title pl-5 mt-6 lg:mt-9 xl:pl-8 text-lg lg:gap-10 2xl:text-xl">
+          <button className="border border-red-600 rounded-full py-[2px] w-44 pl-4 pr-2  flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-48">
             Dates
-            <i className="bx bx-chevron-right text-2xl text-red-500 "></i>
+            <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
           </button>
-          <button className="border border-stone-600 text-stone-500 rounded-full w-48 pl-4 pr-2 flex justify-between items-center shadow-md shadow-zinc-800">
+          <button className="border border-stone-500  rounded-full py-[2px]  w-44 pl-4 pr-2  flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-48">
             Contact
-            <i className="bx bx-chevron-right text-2xl mt-[1px]"></i>
+            <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
           </button>
         </div>
       </article>

@@ -33,11 +33,11 @@ const Dates = () => {
   return (
     <>
       <section id="third_section" className="section before">
-        <div className="w-full relative h-screen flex flex-col items-center gap-16">
+        <div className="w-full relative h-screen flex flex-col items-center gap-20 xl:gap-20">
           <h6 className="font-title2 text-5xl lg:text-6xl text-stone-300 xl:text-7xl ">
             DATES
           </h6>
-          <div className="w-full flex flex-col gap-3 lg:gap-6 md:px-[3%]">
+          <div className="w-full flex flex-col gap-4 lg:gap-6 md:px-[3%]">
             <CardDate />
             <CardDate />
             <CardDate />
@@ -45,7 +45,7 @@ const Dates = () => {
           </div>
         </div>
       </section>
-      <div className="w-full h-[6vh] lg:h-[9vh]"></div>
+      <div className="w-full md:h-[9vh]"></div>
       <div className="container-images">
         <div className="sticky">
           <div className="el">
