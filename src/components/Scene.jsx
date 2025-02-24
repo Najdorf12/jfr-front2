@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Float } from "@react-three/drei";
 
-export function Sphere({windowWidth, ...restprops}) {
+export function Sphere({ windowWidth, ...restprops }) {
   const { nodes, materials } = useGLTF("/scene-transformed.glb");
   const sphere = useRef();
   const tl = gsap.timeline();
@@ -33,7 +33,7 @@ export function Sphere({windowWidth, ...restprops}) {
         },
       })
       .to("#text-about2", {
-        y:  windowWidth < 700 ? "60px" :"95px",
+        y: windowWidth < 700 ? "60px" : "95px",
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
@@ -43,13 +43,15 @@ export function Sphere({windowWidth, ...restprops}) {
           immediateRender: false,
         },
       })
-      .to("#line-about", {
-        width:  windowWidth < 700 ? "50%" : "30%",
+      .to("#card-mask", {
+        width: windowWidth < 700 ? "0px" : "0px",
         ease: "power1",
+        duration: 2.5,
+        stagger: 0.3,
         scrollTrigger: {
-          trigger: "#second_section",
-          start: "90% bottom",
-          end: "30% top",
+          trigger: "#card-mask",
+          start: "12px bottom",
+          end: "12px top",
           scrub: true,
           immediateRender: false,
         },

@@ -33,7 +33,7 @@ const Bio = () => {
       </article>
 
       <article className="flex flex-col items-center justify-center gap-12 self-center ">
-        <div id="line-about" className="w-[30%] h-[1px] bg-stone-300"></div>
+        <div id="line-about" className="w-[30%] lg:w-[40%] h-[1px] bg-stone-300"></div>
         <p className="text-stone-400 text-center max-w-[600px] text-balance font-title text-sm  ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
           praesentium, tempore animi eveniet accusamus et reprehenderit neque
