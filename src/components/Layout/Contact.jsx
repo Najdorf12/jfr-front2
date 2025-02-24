@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <>
       <div className="section after bg-zinc-800">
-        <div id="third_section" className="w-full h-screen flex flex-col justify-center items-center lg:w-1/2 lg:self-start">
+        <div id="third_section" className="w-full font-title h-screen flex flex-col justify-center items-center lg:w-1/2 lg:self-start">
           <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-4 lg:pt-0 xl:gap-6">
             <h6 className="font-text2 font-semibold text-6xl text-whiteCustom xl:text-7xl">
               LET'S TALK

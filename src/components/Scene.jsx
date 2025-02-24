@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Float } from "@react-three/drei";
 
-export function Sphere(props) {
+export function Sphere({windowWidth, ...restprops}) {
   const { nodes, materials } = useGLTF("/scene-transformed.glb");
   const sphere = useRef();
   const tl = gsap.timeline();
@@ -22,7 +22,7 @@ export function Sphere(props) {
       },
     })
       .to("#text-about", {
-        y: "40px",
+        y: windowWidth < 700 ? "25px" : "45px",
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
@@ -33,7 +33,7 @@ export function Sphere(props) {
         },
       })
       .to("#text-about2", {
-        y: "90px",
+        y:  windowWidth < 700 ? "60px" :"95px",
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
@@ -44,7 +44,7 @@ export function Sphere(props) {
         },
       })
       .to("#line-about", {
-        width: "30%",
+        width:  windowWidth < 700 ? "50%" : "30%",
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
@@ -57,7 +57,7 @@ export function Sphere(props) {
   }, []);
 
   return (
-    <group ref={sphere} {...props} dispose={null}>
+    <group ref={sphere} {...restprops} dispose={null}>
       <Float speed={1.3} floatIntensity={1.3}>
         <mesh
           geometry={nodes.Icosphere002_0.geometry}

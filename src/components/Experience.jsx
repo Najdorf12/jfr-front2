@@ -46,7 +46,7 @@ const Experience = () => {
          autoRotateSpeed={1.0}
       />
       <group position={groupPosition} castShadow={true}>
-        <Sphere scale={2} />
+        <Sphere windowWidth={windowWidth} scale={2} />
       </group>
     </>
   );
