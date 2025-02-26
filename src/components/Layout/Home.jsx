@@ -44,7 +44,7 @@ const Home = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-end w-full h-[100dvh] lg:justify-center z-40 overflow-hidden">
-      <figure className="absolute inset-0 ">
+      <figure className="absolute inset-0 w-full flex justify-center items-center">
         <img
           src={imgHome}
           className="w-full h-full object-cover object-center lg:object-[0,-35px]"
