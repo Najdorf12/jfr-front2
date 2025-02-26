@@ -1,6 +1,6 @@
 const CardDate = () => {
   return (
-    <div className="font-title relative text-balance text-sm lg:text-base flex w-full text-stone-500 border-b border-stone-400 pb-3 lg:pb-5">
+    <div className="font-title relative text-balance text-sm lg:text-base flex w-full text-stone-500 border-b border-stone-400 pb-4 lg:pb-5">
       <div
         id="card-mask"
         className="w-full h-full bg-red-500 absolute inset-0"
