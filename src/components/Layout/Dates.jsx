@@ -58,7 +58,7 @@ const Dates = () => {
               <img src={imgJfr2} alt="" />
             </div>
           </div>
-          <div className="el">
+         {/*  <div className="el">
             <div className="imageContainer">
               <img src={imgJfr5} alt="" />
             </div>
@@ -82,7 +82,7 @@ const Dates = () => {
             <div className="imageContainer">
               <img src={imgJfr7} alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

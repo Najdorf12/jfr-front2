@@ -47,18 +47,18 @@ const Contact = () => {
               >
                 <input
                   placeholder="Email address "
-                  className=" text-stone-600 border border-stone-700 rounded-md p-2 mb-4 bg-transparent focus:outline-none focus:ring-1 transition ease-in-out duration-150 placeholder:text-stone-600"
+                  className=" text-stone-600 border border-stone-700 rounded-md p-2 mb-4 bg-transparent focus:outline-none focus:ring-2 focus:ring-red-500 transition ease-in-out duration-150 placeholder:text-stone-600"
                   type="email"
                   {...register("email")}
                 />
                 <input
                   placeholder="WhatsApp"
-                  className="text-stone-600 border border-stone-700 rounded-md p-2 mb-4 bg-transparent focus:outline-none focus:ring-1 transition ease-in-out duration-150 placeholder:text-stone-600"
+                  className="text-stone-600 border border-stone-700 rounded-md p-2 mb-4 bg-transparent focus:outline-none focus:ring-2 focus:ring-red-500 transition ease-in-out duration-150 placeholder:text-stone-600"
                   {...register("wttp")}
                 />
                 <textarea
                   placeholder="Message"
-                  className=" text-stone-600 h-[120px] border border-stone-700 rounded-md p-2 mb-4 bg-transparent focus:outline-none focus:ring-1 transition ease-in-out duration-150 placeholder:text-stone-600"
+                  className=" text-stone-600 h-[120px] border border-stone-700 rounded-md p-2 mb-4 bg-transparent focus:outline-none focus:ring-2 focus:ring-red-500 transition ease-in-out duration-150 placeholder:text-stone-600"
                   {...register("message")}
                 />
                 <button
