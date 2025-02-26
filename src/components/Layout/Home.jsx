@@ -43,11 +43,11 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-end w-full h-screen lg:justify-center z-40 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-end w-full h-[100dvh] lg:justify-center z-40 overflow-hidden">
       <figure className="absolute inset-0 ">
         <img
           src={imgHome}
-          className="w-full h-full  object-cover object-center lg:object-[0,-35px]"
+          className="w-full h-full object-cover object-center lg:object-[0,-35px]"
           alt="img-home"
         />
       </figure>
