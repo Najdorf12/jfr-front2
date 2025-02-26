@@ -3,12 +3,12 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgJfr1 from "/images2025/17.jpg";
-import imgJfr2 from "/images2025/compressed/01.webp";
+import imgJfr2 from "/images2025/compressed/07.webp";
 import imgJfr3 from "/images2025/compressed/02.webp";
+import imgJfr6 from "/images2025/compressed/03.webp";
 import imgJfr4 from "/images2025/compressed/04.webp";
-import imgJfr5 from "/images2025/compressed/05.webp";
-import imgJfr6 from "/images2025/03.jpg";
-import imgJfr7 from "/images2025/10.jpg";
+import imgJfr5 from "/images2025/01.jpg";
+import imgJfr7 from "/images2025/compressed/05.webp";
 import CardDate from "./CardDate";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -58,7 +58,7 @@ const Dates = () => {
               <img src={imgJfr2} alt="" />
             </div>
           </div>
-         {/*  <div className="el">
+           <div className="el">
             <div className="imageContainer">
               <img src={imgJfr5} alt="" />
             </div>
@@ -82,7 +82,7 @@ const Dates = () => {
             <div className="imageContainer">
               <img src={imgJfr7} alt="" />
             </div>
-          </div> */}
+          </div> 
         </div>
       </div>
     </>
