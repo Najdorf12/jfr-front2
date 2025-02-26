@@ -6,7 +6,7 @@ const Bio = () => {
       id="second_section"
       className="relative w-full h-screen flex flex-col items-center justify-between px-[2%] py-12 lg:py-9 "
     >
-      <div className="w-full h-screen absolute z-30 overflow-hidden lg:block">
+      <div className="w-full h-screen absolute z-30 overflow-hidden block">
         <Canvas>
           <Experience />
         </Canvas>
@@ -32,9 +32,12 @@ const Bio = () => {
         </h4>
       </article>
 
-      <article className="flex flex-col items-center justify-center gap-12 self-center ">
-        <div id="line-about" className="w-[30%] lg:w-[40%] h-[1px] bg-stone-300"></div>
-        <p className="text-stone-400 text-center max-w-[600px] text-balance font-title text-sm  ">
+      <article className="flex z-50 flex-col items-center justify-center gap-12 self-center ">
+        <div
+          id="line-about"
+          className="w-[30%] lg:w-[40%] h-[1px] bg-stone-300"
+        ></div>
+        <p className="text-stone-400  text-center max-w-[600px] text-balance font-title text-sm z-50">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
           praesentium, tempore animi eveniet accusamus et reprehenderit neque
           molestiae asperiores in impedit architecto explicabo ipsa, minus fugit
@@ -42,7 +45,6 @@ const Bio = () => {
         </p>
       </article>
     </section>
-    
   );
 };
 
