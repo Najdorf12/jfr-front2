@@ -47,14 +47,14 @@ const Login = () => {
             <img className="rounded-full" src={logo} alt="logo" />
           </picture>
           <ul className="flex gap-6 xl:gap-10 2xl:gap-12">
-            <li className="text-rose-600 border-l-2 border-zinc-400 pl-2 xl:pl-3 py-1 hover:scale-105 hover:text-rose-600 duration-500 ">
+            <li className="text-rose-600 font-title2 border-l-2 border-zinc-400 pl-2 xl:pl-3 py-1 hover:scale-105 hover:text-rose-600 duration-500 ">
               <Link to={"/"}>Home </Link>
             </li>
           </ul>
         </nav>
 
         <div className="max-w-md w-full  rounded-xl shadow-2xl shadow-gray-900 overflow-hidden py-8 px-4 space-y-8 ">
-          <h2 className="text-center font-title text-6xl font-extrabold text-rose-600">
+          <h2 className="text-center font-title2 text-6xl font-semibold text-rose-600">
             Welcome
           </h2>
           {loginError?.map((error, i) => (
@@ -65,7 +65,7 @@ const Login = () => {
               <p> {error} </p>
             </div>
           ))}
-          <p className="font-text2 text-center text-zinc-400">
+          <p className="font-title text-center text-zinc-400">
             Sign in to your account
           </p>
           <form onSubmit={handleSubmit(submit)} className="space-y-6">
@@ -122,13 +122,13 @@ const Login = () => {
             </div>
 
             <button
-              className="w-full font-text2 py-2 px-4 border-[1px] border-slate-300 bg-rose-600 rounded-md shadow-lg text-white font-semibold hover:bg-zinc-600 transition duration-500"
+              className="w-full font-title py-2 px-4 border-[1px] border-slate-300 bg-rose-600 rounded-md shadow-lg text-white font-semibold hover:bg-zinc-600 transition duration-500"
               type="submit"
             >
               Sign In
             </button>
           </form>
-          <div className="text-center text-zinc-400 font-text2">
+          <div className="text-center text-zinc-400 font-title">
             Don't have an account?
             <Link
               to={"/register"}

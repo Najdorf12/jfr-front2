@@ -42,7 +42,7 @@ const Register = () => {
           <img className="rounded-full" src={logo} alt="logo" />
         </picture>
         <ul className="flex gap-6 xl:gap-10 2xl:gap-12">
-          <li className="text-rose-600 border-l-2 border-zinc-400 pl-2 xl:pl-3 py-1 hover:scale-105 hover:text-rose-600 duration-500 ">
+          <li className="text-rose-600 border-l-2 font-title2 border-zinc-400 pl-2 xl:pl-3 py-1 hover:scale-105 hover:text-rose-600 duration-500 ">
             <Link to={"/"}>Home </Link>
           </li>
         </ul>
@@ -56,14 +56,14 @@ const Register = () => {
             <p> {error} </p>
           </div>
         ))}
-        <h2 className="text-center font-title text-6xl font-extrabold text-rose-600">
+        <h2 className="text-center font-title2 text-6xl font-semibold text-rose-600">
           Register
         </h2>
-        <p className="text-center text-zinc-400 font-text2 text-base">
+        <p className="text-center text-zinc-400 font-title text-base">
           Create your account
         </p>
         <form onSubmit={handleSubmit(submit)} className="space-y-6">
-          <div className="relative font-text2">
+          <div className="relative font-title">
             <input
               autoComplete="off"
               placeholder="Joe Doe"
@@ -83,7 +83,7 @@ const Register = () => {
               </p>
             </label>
           </div>
-          <div className="relative font-text2">
+          <div className="relative font-title">
             <input
               autoComplete="off"
               placeholder="john@example.com"
@@ -108,7 +108,7 @@ const Register = () => {
               </p>
             </label>
           </div>
-          <div className="relative font-text2">
+          <div className="relative font-title">
             <input
               autoComplete="off"
               placeholder="Password"
@@ -136,13 +136,13 @@ const Register = () => {
           </div>
 
           <button
-            className="w-full font-text2  py-2 px-4 border-[1px] border-slate-300 hover:bg-zinc-600 rounded-md shadow-lg text-white bg-rose-600 font-semibold transition duration-500 hover:text-white"
+            className="w-full font-title  py-2 px-4 border-[1px] border-slate-300 hover:bg-zinc-600 rounded-md shadow-lg text-white bg-rose-600 font-semibold transition duration-500 hover:text-white"
             type="submit"
           >
             Register
           </button>
         </form>
-        <div className="text-center text-zinc-400 font-text2">
+        <div className="text-center text-zinc-400 font-title">
           Do you have an account?
           <Link className="text-rose-600 ml-1 hover:underline" to="/login">
             <strong>Login</strong>{" "}

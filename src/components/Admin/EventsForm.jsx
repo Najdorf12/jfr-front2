@@ -81,16 +81,16 @@ const EventsForm = ({ events, setEvents }) => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <section className="w-full rounded-xl border-zinc-700 border overflow-hidden py-6 px-4 space-y-6 md:space-y-7 md:w-[550px] xl:w-[920px] xl:space-y-9 xl:px-6">
-        <h2 className="text-center font-title text-5xl font-extrabold text-whiteCustom md:text-6xl xl:text-7xl 2xl:text-8xl">
+      <section className="w-full rounded-xl border-zinc-700 border overflow-hidden py-6 px-4 space-y-6 md:space-y-7 md:w-[550px] xl:w-[830px] xl:space-y-14 xl:px-8 xl:py-9">
+        <h2 className="text-center font-title2 text-5xl font-normal text-whiteCustom md:text-6xl xl:text-7xl 2xl:text-8xl">
           EVENTOS
         </h2>
-        <p className="text-center text-zinc-500 font-text2 text-base  xl:text-xl 2xl:text-xl">
+        <p className="text-center text-zinc-500 font-title text-base  xl:text-xl 2xl:text-xl">
           Crea un nuevo evento
         </p>
         <form onSubmit={handleSubmit(submit)} className="space-y-7">
           <div className="flex flex-col gap-8 xl:flex xl:flex-row ">
-            <div className="relative font-text2 xl:w-1/2">
+            <div className="relative font-title xl:w-1/2">
               <input
                 autoComplete="off"
                 placeholder="Joe Doe"
@@ -107,7 +107,7 @@ const EventsForm = ({ events, setEvents }) => {
                 Title
               </label>
             </div>
-            <div className="relative font-text2 xl:w-1/2">
+            <div className="relative font-title xl:w-1/2">
               <input
                 autoComplete="off"
                 placeholder="description"
@@ -126,7 +126,7 @@ const EventsForm = ({ events, setEvents }) => {
           </div>
 
           <div className="flex flex-col gap-6 xl:flex xl:flex-row  ">
-            <div className="relative font-text2 xl:w-1/2">
+            <div className="relative font-title xl:w-1/2">
               <input
                 autoComplete="off"
                 placeholder="john@example.com"
@@ -143,7 +143,7 @@ const EventsForm = ({ events, setEvents }) => {
                 Location
               </label>
             </div>
-            <div className="relative font-text2 xl:w-1/2">
+            <div className="relative font-title xl:w-1/2">
               <input
                 autoComplete="off"
                 placeholder="john@example.com"
@@ -161,7 +161,7 @@ const EventsForm = ({ events, setEvents }) => {
               </label>
             </div>
           </div>
-          <div className="relative font-text2 flex gap-6 items-center">
+          <div className="relative font-title flex gap-6 items-center">
             <p className="text-zinc-500">Is Active?</p>
             <label className="container-checkbox">
               <input
@@ -180,7 +180,7 @@ const EventsForm = ({ events, setEvents }) => {
           </div>
           <div className="flex items-center justify-center ">
             <button
-              className="w-full font-text2  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:bg-rose-600 hover:bg-transparent hover:text-whiteCustom font-semibold transition duration-500 text-rose-600 xl:w-[80%] xl:self-center "
+              className="w-full font-title  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:bg-rose-600 hover:text-whiteCustom font-semibold transition duration-500 text-rose-600 xl:w-[80%] xl:self-center"
               type="submit"
             >
               Submit
