@@ -1,4 +1,5 @@
-import imgHome from "/images2025/compressed/img-home.jpg";
+import imgHomeDesktop from "/images2025/compressed/img-home.jpg";
+import imgHomeMobile from "/images2025/compressed/img-home2.jpg";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import imgTitle from "../../assets/images/jfr-white.png";
@@ -43,16 +44,21 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-end w-full h-[100dvh] lg:justify-center z-40 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-end w-full h-screen lg:justify-center z-40 overflow-hidden">
       <figure className="absolute inset-0 w-full flex justify-center items-center">
         <img
-          src={imgHome}
-          className="w-full h-full object-cover object-center lg:object-[0,-35px]"
+          src={imgHomeDesktop}
+          className="hidden lg:block w-full h-full object-cover object-center lg:object-[0,-35px]"
           alt="img-home"
+        />
+        <img
+          src={imgHomeMobile}
+          className="block lg:hidden w-full h-full object-cover object-center"
+          alt="img-mobile"
         />
       </figure>
 
-      <article className="z-50 flex flex-col pb-9 lg:pl-[2%] xl:pb-0">
+      <article className="z-50 flex flex-col pb-12 lg:pl-[2%] xl:pb-0">
         <figure className="">
           <img
             ref={titleRef}

@@ -49,12 +49,12 @@ const Dates = () => {
         <div className="sticky">
           <div className="el">
             <div className="imageContainer">
-              <img src={imgDates} alt="" />
+              <img src={imgDates} alt="" loading="lazy" />
             </div>
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr2} alt="" />
+              <img src={imgJfr2} alt="" loading="lazy" />
             </div>
           </div>
           <div className="el">
@@ -66,17 +66,17 @@ const Dates = () => {
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr4} alt="" />
+              <img src={imgJfr4} alt="" loading="lazy" />
             </div>
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr3} alt="" />
+              <img src={imgJfr3} alt="" loading="lazy" />
             </div>
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr6} alt="" />
+              <img src={imgJfr6} alt="" loading="lazy" />
             </div>
           </div>
           <div className="el">
