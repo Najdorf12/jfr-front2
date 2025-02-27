@@ -57,9 +57,11 @@ const Dates = () => {
               <img src={imgJfr2} alt="" />
             </div>
           </div>
-           <div className="el">
+          <div className="el">
             <div className="imageContainer bg-zinc-800">
-            {/*   <img src={imgJfr5} alt="" /> */}
+              <p className="font-title2 flex items-center justify-center w-full h-full text-whiteCustom text-3xl lg:text-5xl">
+                JFR
+              </p>
             </div>
           </div>
           <div className="el">
@@ -79,9 +81,11 @@ const Dates = () => {
           </div>
           <div className="el">
             <div className="imageContainer bg-red-500">
-              {/* <img src={imgJfr7} alt="" /> */}
+              <p className="font-title2 flex items-center justify-center w-full h-full text-whiteCustom text-xl md:text-2xl">
+                JFR
+              </p>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </>
