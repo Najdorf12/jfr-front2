@@ -1,4 +1,4 @@
-import imgHome from "/images2025/16.jpg";
+import imgHome from "/images2025/compressed/img-home.jpg";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import imgTitle from "../../assets/images/jfr-white.png";

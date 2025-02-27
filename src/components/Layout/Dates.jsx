@@ -1,14 +1,13 @@
-import imgDates from "/images2025/17.jpg";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import imgJfr1 from "/images2025/17.jpg";
+import imgDates from "/images2025/compressed/img-dates.jpg";
 import imgJfr2 from "/images2025/compressed/07.webp";
 import imgJfr3 from "/images2025/compressed/02.webp";
 import imgJfr6 from "/images2025/compressed/03.webp";
-import imgJfr4 from "/images2025/compressed/04.webp";
-import imgJfr5 from "/images2025/01.jpg";
-import imgJfr7 from "/images2025/compressed/05.webp";
+import imgJfr4 from "/images2025/compressed/08.jpg";
+/* import imgJfr5 from "/images2025/compressed/07.webp";
+import imgJfr7 from "/images2025/compressed/05.webp"; */
 import CardDate from "./CardDate";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,7 +49,7 @@ const Dates = () => {
         <div className="sticky">
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr1} alt="" />
+              <img src={imgDates} alt="" />
             </div>
           </div>
           <div className="el">
@@ -59,8 +58,8 @@ const Dates = () => {
             </div>
           </div>
            <div className="el">
-            <div className="imageContainer">
-              <img src={imgJfr5} alt="" />
+            <div className="imageContainer bg-zinc-800">
+            {/*   <img src={imgJfr5} alt="" /> */}
             </div>
           </div>
           <div className="el">
@@ -79,8 +78,8 @@ const Dates = () => {
             </div>
           </div>
           <div className="el">
-            <div className="imageContainer">
-              <img src={imgJfr7} alt="" />
+            <div className="imageContainer bg-red-500">
+              {/* <img src={imgJfr7} alt="" /> */}
             </div>
           </div> 
         </div>
