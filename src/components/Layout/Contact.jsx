@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import axios from "../../config/axios";
+import PlayList from "./Playlist"
 
 const Contact = () => {
   const {
@@ -26,9 +27,19 @@ const Contact = () => {
   return (
     <>
       <div className="section after bg-zinc-800">
+       <PlayList /> 
+        <div className="w-full py-12 xl:pt-40 flex justify-evenly  items-center ">
+          <p className="text-5xl font-title2 text-red-500 max-w-[700px] text-balance">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </p>
+          <div className="h-[200px] w-[1px] bg-stone-600"></div>
+          <p className="text-base font-title2 text-stone-700 max-w-[400px] text-balance -ml-16">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium, odio commodi fugiat dolores quas quis ipsam, reprehenderit voluptates voluptate vero, perspiciatis recusandae quasi labore eius aliquam illum. Praesentium, laboriosam?
+          </p>
+        </div>
         <div
           id="third_section"
-          className="w-full font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start"
+          className="w-full relative font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start "
         >
           <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-4 lg:pt-0 xl:gap-6">
             <h6 className="font-text2 font-semibold text-6xl text-whiteCustom xl:text-7xl">
@@ -65,7 +76,7 @@ const Contact = () => {
                   {...register("message")}
                 />
                 <button
-                  className="bg-gradient-to-tl border border-red-500 font-text2 text-red-500  py-2 px-4 rounded-md mt-4 transition ease-in-out duration-150"
+                  className="bg-gradient-to-tl border border-red-500 font-text2 text-red-500  py-2 px-4 rounded-md mt-4 transition ease-in-out duration-300 hover:bg-red-500 hover:text-whiteCustom"
                   type="submit"
                 >
                   Send message

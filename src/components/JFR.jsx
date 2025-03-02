@@ -6,6 +6,7 @@ import Contact from "./Layout/Contact";
 import gsap from "gsap";
 import { ReactLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
+import PlayList from "./Layout/Playlist";
 
 function JFR() {
   const lenisRef = useRef();
@@ -32,6 +33,7 @@ function JFR() {
         </nav>
         <Home />
         <Bio />
+       {/*  <PlayList></PlayList> */}
         <div className="w-full h-[8vh] md:h-[20vh]"></div>
         <Dates />
         <Contact />
