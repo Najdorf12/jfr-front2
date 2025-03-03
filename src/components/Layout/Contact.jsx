@@ -85,7 +85,7 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <ul className="flex justify-center items-center gap-9 pt-8 text-stone-600 text-4xl lg:gap-16">
+            <ul className="flex justify-center items-center gap-9 pt-8 text-stone-600 text-4xl lg:gap-12">
               <li>
                 <i className="bx bxl-instagram hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
               </li>
