@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import axios from "../../config/axios";
-import PlayList from "./Playlist"
+import PlayList from "./Playlist";
 
 const Contact = () => {
   const {
@@ -27,20 +27,30 @@ const Contact = () => {
   return (
     <>
       <div className="section after bg-zinc-800">
-       <PlayList /> 
-        <div className="w-full py-12 xl:pt-40 flex justify-evenly  items-center ">
-          <p className="text-5xl font-title2 text-red-500 max-w-[700px] text-balance">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          </p>
-          <div className="h-[200px] w-[1px] bg-stone-600"></div>
-          <p className="text-base font-title2 text-stone-700 max-w-[400px] text-balance -ml-16">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium, odio commodi fugiat dolores quas quis ipsam, reprehenderit voluptates voluptate vero, perspiciatis recusandae quasi labore eius aliquam illum. Praesentium, laboriosam?
-          </p>
-        </div>
+        <section className="w-full">
+          <PlayList />
+          <div className="w-full flex flex-col mt-12 justify-center items-center px-4 lg:flex-row xl:mt-20 ">
+            <p className="text-3xl lg:text-5xl font-title2 text-red-500 max-w-[700px] ">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>
+            <p className="relative mt-12 py-4 text-sm font-title  text-stone-700 max-w-[400px] lg:text-base">
+              <div className="h-[1px] w-[60%] bg-stone-600 absolute top-0 right-0 lg:-left-5 lg:h-full lg:w-[1px]"></div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              praesentium, odio commodi fugiat dolores quas quis ipsam,
+              reprehenderit voluptates voluptate vero, perspiciatis recusandae
+              quasi labore eius aliquam illum. Praesentium, laboriosam?
+            </p>
+          </div>
+        </section>
+        <div className="w-[30%] h-[5vh] bg-stone-600 self-start mt-12"></div>
         <div
           id="third_section"
           className="w-full relative font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start "
         >
+        {/* <div className="absolute bg-stone-600 h-[300px] w-[300px]  bottom-12 -right-[700px]"></div>
+        <div className="absolute bg-red-500 h-[300px] w-[300px]  bottom-20 -right-[800px] z-40"></div>
+        <div className="absolute bg-stone-700 h-[300px] w-[300px]  bottom-32 -right-[900px] z-40"></div> */}
+
           <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-4 lg:pt-0 xl:gap-6">
             <h6 className="font-text2 font-semibold text-6xl text-whiteCustom xl:text-7xl">
               LET'S TALK
