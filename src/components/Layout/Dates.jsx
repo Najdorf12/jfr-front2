@@ -34,7 +34,7 @@ const Dates = () => {
     <>
       <section id="third_section" className="section before">
         <div className="w-full relative h-screen flex flex-col items-center gap-20 xl:gap-20">
-          <h6 className="font-title2 text-5xl lg:text-6xl text-stone-300 xl:text-7xl ">
+          <h6 className="font-title2 text-5xl lg:text-6xl text-stone-300 xl:text-8xl ">
             DATES
           </h6>
           <div className="w-full flex flex-col gap-7 lg:gap-6 md:px-[3%]">

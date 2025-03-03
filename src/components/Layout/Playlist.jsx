@@ -18,11 +18,11 @@ const spotify = [
 
 const PlayList = () => {
   return (
-    <section className="w-full flex flex-col gap-20 px-3 py-16 justify-center items-center lg:flex-row">
+    <section className="w-full flex flex-col gap-24 px-3 py-16 justify-center items-center lg:flex-row lg:pt-24">
       {spotify?.map((disk, i) => (
         <div
           key={i}
-          className="border border-stone-400 rounded-xl w-full h-[270px] xl:w-[600px] xl:h-[340px] flex flex-col justify-between relative"
+          className="border border-stone-400 rounded-xl w-full h-[270px] md:w-[600px] md:h-[310px] flex flex-col justify-between relative"
         >
           <article className="font-title2 text-stone-400 pr-3 flex flex-col items-end z-50">
             <p className="text-6xl lg:text-8xl text-stone-600">0{i + 1}</p>

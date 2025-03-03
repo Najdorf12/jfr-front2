@@ -29,33 +29,30 @@ const Contact = () => {
       <div className="section after bg-zinc-800">
         <section className="w-full">
           <PlayList />
-          <div className="w-full flex flex-col mt-12 justify-center items-center px-4 lg:flex-row xl:mt-20 ">
-            <p className="text-3xl lg:text-5xl font-title2 text-red-500 max-w-[700px] ">
+          <div className="w-full flex flex-col text-center mt-20 justify-center items-center px-2 lg:flex-col xl:mt-32 ">
+            <p className="text-3xl  lg:text-5xl font-title2 text-red-500 max-w-[800px] ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </p>
-            <p className="relative mt-12 py-4 text-sm font-title  text-stone-700 max-w-[400px] lg:text-base">
-              <div className="h-[1px] w-[60%] bg-stone-600 absolute top-0 right-0 lg:-left-5 lg:h-full lg:w-[1px]"></div>
+            <p className="relative mt-9  text-sm font-title flex justify-center items-center max-w-[300px]  text-stone-700 md:max-w-[700px] lg:text-base">
+              {/* <div className="h-[1px] w-[60%] bg-stone-600 absolute top-0 "></div> */}
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              praesentium, odio commodi fugiat dolores quas quis ipsam,
-              reprehenderit voluptates voluptate vero, perspiciatis recusandae
-              quasi labore eius aliquam illum. Praesentium, laboriosam?
+              praesentium, odio commodi fugiat dolores quas quis ipsam.
             </p>
           </div>
         </section>
-        <div className="w-[30%] h-[5vh] rounded-r-sm self-start mt-12"></div>
-        <section className="w-full lg:flex lg:flex-row">
+        <section className="w-full lg:flex lg:flex-row mt-12 xl:mt-14">
           <div className="w-full relative font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start ">
             <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-4 lg:pt-0 xl:gap-6">
-              <h6 className="font-text2 font-semibold text-6xl text-whiteCustom xl:text-7xl">
+              <h6 className="font-text2 font-semibold text-6xl text-whiteCustom lg:text-7xl 2xl:text-8xl">
                 LET'S TALK
               </h6>
-              <p className="text-stone-600 text-sm">
+              <p className="text-stone-600 text-sm lg:text-base 2xl:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
                 Sapiente, et aspernatur? Accusantium fuga nulla
               </p>
             </article>
-            <div className="w-full max-w-md  mt-12 font-title text-sm flex flex-col justify-center lg:mt-6">
-              <div className="w-full max-w-md bg-gray-800 rounded-lg p-6">
+            <div className="w-full max-w-md  mt-12 font-title text-sm flex flex-col justify-center lg:mt-6 xl:max-w-[490px]">
+              <div className="w-full max-w-md bg-gray-800 rounded-lg p-6 xl:max-w-[900px]">
                 <form
                   onSubmit={handleSubmit(onSubmit)}
                   className="flex flex-col w-full"
@@ -97,13 +94,15 @@ const Contact = () => {
               </li>
               <li>
                 <i className="bx bxl-twitter hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
+              </li><li>
+                <i className="bx bxl-youtube hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
               </li>
             </ul>
           </div>
-          <div className="hidden lg:w-1/2 lg:flex items-start justify-end relative mt-12 ">
-            <div className="w-[300px] h-[300px]  bg-stone-700 z-50 absolute mr-32 mt-12"></div>
-            <div className="w-[300px] h-[300px] bg-stone-600 z-40 absolute mr-44 mt-32"></div>
-            <div className="w-[300px] h-[300px] bg-red-500 z-50 absolute"></div>
+          <div className="hidden lg:w-1/2 lg:flex items-center justify-center relative mt-12 ">
+            <div className="w-[200px] h-[200px] border border-red-500 z-50  absolute"></div>
+            <div className="w-[200px] h-[200px] border border-stone-600 z-40 absolute left-[50%] bottom-[50%]"></div>
+            <div className="w-[200px] h-[200px] border border-stone-700 z-50 absolute right-[50%] top-[50%]"></div>
           </div>
         </section>
       </div>
