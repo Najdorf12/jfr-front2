@@ -33,11 +33,33 @@ const Dates = () => {
   return (
     <>
       <section id="third_section" className="section before">
-        <div className="w-full relative h-screen flex flex-col items-center gap-20 xl:gap-20">
-          <h6 className="font-title2 text-5xl lg:text-6xl text-stone-300 xl:text-[4.7rem] ">
-            DATES
-          </h6>
-          <div className="w-full flex flex-col gap-7 lg:gap-6 md:px-[3%]">
+        <div className="w-full relative pt-14 pb-20 flex flex-col items-center gap-14 lg:pt-28 xl:gap-20">
+          <article className="z-50 text-6xl lg:text-[7.5rem] text-stone-300 flex flex-col font-title2 self-center ">
+            <h4 className="relative z-50">
+              DATES
+              <div
+                style={{
+                  WebkitTextStroke: "2px  #d6d3d1",
+                  color: "transparent",
+                }}
+                className="text-stone-200 absolute inset-0 z-30"
+                id="text-dates"
+              >
+                DATES
+              </div>
+              <div
+                style={{
+                  WebkitTextStroke: "2px #e7e5e4",
+                  color: "transparent",
+                }}
+                className="text-stone-300 absolute inset-0 z-10"
+                id="text-dates2"
+              >
+                DATES
+              </div>
+            </h4>
+          </article>
+          <div className="w-full flex flex-col gap-7 lg:gap-5 ">
             <CardDate />
             <CardDate />
             <CardDate />
@@ -77,8 +99,7 @@ const Dates = () => {
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr6} alt="" loading="lazy"
-               />
+              <img src={imgJfr6} alt="" loading="lazy" />
             </div>
           </div>
           <div className="el">

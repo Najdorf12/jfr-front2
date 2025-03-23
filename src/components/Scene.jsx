@@ -43,6 +43,28 @@ export function Sphere({ windowWidth, ...restprops }) {
           immediateRender: false,
         },
       })
+    /*   .to("#text-dates", {
+        x: windowWidth < 700 ? "40px" : "45px",
+        ease: "power1",
+        scrollTrigger: {
+          trigger: "#third_section",
+          start: "5% bottom",
+          end: "top top",
+          scrub: true,
+          immediateRender: false,
+        },
+      }) */
+      .to("#text-dates2", {
+        x: windowWidth < 700 ? "40px" : "95px",
+        ease: "power1",
+        scrollTrigger: {
+          trigger: "#third_section",
+          start: "5% bottom",
+          end: "top top",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
       .to("#card-mask", {
         width: windowWidth < 700 ? "0px" : "0px",
         ease: "power1",
@@ -50,8 +72,8 @@ export function Sphere({ windowWidth, ...restprops }) {
         stagger: 0.3,
         scrollTrigger: {
           trigger: "#card-mask",
-          start: "12px bottom",
-          end: "12px top",
+          start: "200px bottom",
+          end: "200px top",
           scrub: true,
           immediateRender: false,
         },

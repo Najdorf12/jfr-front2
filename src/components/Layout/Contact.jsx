@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import axios from "../../config/axios";
-import PlayList from "./Playlist";
 
 const Contact = () => {
   const {
@@ -28,27 +27,30 @@ const Contact = () => {
     <>
       <div className="section after bg-zinc-800">
         <section className="w-full">
-          <PlayList />
-          <div className="w-full flex flex-col text-center mt-20 justify-center items-center px-2 lg:flex-col xl:mt-32 ">
-            <p className="text-3xl  lg:text-5xl font-title2 text-red-500 max-w-[800px] ">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-32 ">
+            <p className="text-2xl md:text-3xl lg:text-5xl font-title2 text-red-500 max-w-[1000px] ">
+              JFR has become a crowd favorite, known for his sonic vitality and
+              infectious energy behind the decks.
             </p>
-            <p className="relative mt-9  text-sm font-title flex justify-center items-center max-w-[300px]  text-stone-700 md:max-w-[700px] lg:text-base">
-              {/* <div className="h-[1px] w-[60%] bg-stone-600 absolute top-0 "></div> */}
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              praesentium, odio commodi fugiat dolores quas quis ipsam.
+            <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:text-lg">
+              He is also a professor of electronic music production, Label
+              Manager of Musique de Lune and founder of his own label and the
+              popular radio series Secret Feelings.
             </p>
           </div>
         </section>
-        <section className="w-full lg:flex lg:flex-row mt-12 xl:mt-14">
+        <section
+          id="contact_section"
+          className="w-full lg:flex lg:flex-row mt-12 xl:mt-16"
+        >
           <div className="w-full relative font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start ">
-            <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-4 lg:pt-0 xl:gap-6">
+            <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-6 lg:pt-0 xl:gap-6">
               <h6 className="font-text2 font-semibold text-6xl text-whiteCustom lg:text-7xl 2xl:text-8xl">
                 LET'S TALK
               </h6>
-              <p className="text-stone-600 text-sm lg:text-base 2xl:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                Sapiente, et aspernatur? Accusantium fuga nulla
+              <p className="text-stone-600 text-base 2xl:text-lg">
+                For bookings, collaborations, or just to share your thoughts,
+                drop me a message.
               </p>
             </article>
             <div className="w-full max-w-md  mt-12 font-title text-sm flex flex-col justify-center lg:mt-6 xl:max-w-[490px]">
@@ -94,7 +96,8 @@ const Contact = () => {
               </li>
               <li>
                 <i className="bx bxl-twitter hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
-              </li><li>
+              </li>
+              <li>
                 <i className="bx bxl-youtube hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
               </li>
             </ul>

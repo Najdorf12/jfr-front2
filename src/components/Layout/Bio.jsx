@@ -4,7 +4,7 @@ const Bio = () => {
   return (
     <section
       id="second_section"
-      className="relative w-full h-screen flex flex-col items-center justify-between px-[2%] py-12 lg:py-9 "
+      className="relative w-full h-[115vh] flex flex-col items-center justify-between px-[2%] py-12 md:h-screen lg:py-7 "
     >
       <div className="w-full h-screen absolute z-30 overflow-hidden block">
         <Canvas>
@@ -32,17 +32,22 @@ const Bio = () => {
         </h4>
       </article>
 
-      <article className="flex z-50 flex-col items-center justify-center gap-12 self-center ">
+      <article className="flex z-50 flex-col items-center justify-center gap-10 self-center ">
         <div
           id="line-about"
-          className="w-[30%] lg:w-[40%] h-[1px] bg-stone-300"
+          className="w-[40%] lg:w-[40%] h-[1px] bg-stone-300"
         ></div>
-        <p className="text-stone-400  text-center max-w-[600px] text-balance font-title text-sm z-50">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-          praesentium, tempore animi eveniet accusamus et reprehenderit neque
-          molestiae asperiores in impedit architecto explicabo ipsa, minus fugit
-          itaque facilis vitae quo
+        <p className="text-stone-400 px-3 text-center max-w-[600px] lg:max-w-[750px] text-balance font-title text-sm z-50">
+          JFR has an impressive catalog of productions on labels such as All Day
+          I Dream, Anjunadeep, Musique de Lune, Clubsonica and more. After
+          living for 5 years in Europe, where he played in the best clubs of the
+          continent, JFR has returned to live in Mendoza, Argentina, and has
+          resumed his tour of the best clubs in South America. JFR's soulful
+          sounds have received the support of industry icons such as Tony
+          McGuinness, Lee Burridge, Hernan Cattaneo and Nick Warren, among
+          others.
         </p>
+        
       </article>
     </section>
   );
