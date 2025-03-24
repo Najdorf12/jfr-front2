@@ -27,31 +27,31 @@ const Contact = () => {
     <>
       <div className="section after bg-zinc-800">
         <section className="w-full">
-          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-28 ">
-            <p className="text-2xl md:text-3xl lg:text-5xl font-title2 text-red-500 max-w-[1000px] ">
+          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-28">
+            <p className="text-2xl md:text-3xl lg:text-5xl font-title2 text-red-500 max-w-[1000px] 2xl:text-[3.3rem] 2xl:max-w-[1100px]">
               JFR has become a crowd favorite, known for his sonic vitality and
-              infectious energy behind the decks.
+              infectious energy behind the decks
             </p>
-            <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg">
+            <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg 2xl:text-xl 2xl:mt-10">
               He is also a professor of electronic music production, Label
               Manager of Musique de Lune and founder of his own label and the
-              popular radio series Secret Feelings.
+              popular radio series Secret Feelings
             </p>
-            <div className="w-[50%] h-[1px] mt-6 bg-zinc-700 md:w-[20%] lg:mt-10"></div>
+            <div className="w-[50%] h-[1px] mt-6 bg-zinc-700 md:w-[20%] lg:mt-10 2xl:mt-12"></div>
           </div>
         </section>
         <section
           id="contact_section"
-          className="w-full lg:flex lg:flex-row mt-12 xl:mt-16"
+          className="w-full lg:flex lg:flex-row mt-12 "
         >
           <div className="w-full relative font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start ">
             <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-6 lg:pt-0 xl:gap-6">
               <h6 className="font-text2 font-semibold text-6xl text-whiteCustom lg:text-7xl 2xl:text-8xl">
                 LET'S TALK
               </h6>
-              <p className="text-stone-600 text-base 2xl:text-lg">
-                For bookings, collaborations, or just to share your <br />{" "}
-                thoughts, drop me a message.
+              <p className="text-stone-600 text-base px-3 max-w-[500px] 2xl:text-lg ">
+                For bookings, collaborations, or just to share your thoughts,
+                drop me a message
               </p>
             </article>
             <div className="w-full max-w-md  mt-12 font-title text-sm flex flex-col justify-center lg:mt-6 xl:max-w-[490px]">
@@ -117,9 +117,9 @@ const Contact = () => {
             </ul>
           </div>
           <div className="hidden lg:w-1/2 lg:flex items-center justify-center relative mt-12 ">
-            <div className="w-[200px] h-[200px] border border-red-500 z-50  absolute group hover:rotate-180 duration-700"></div>
-            <div className="w-[200px] h-[200px] border border-stone-600 z-40 absolute  left-[50%] bottom-[50%] hover:rotate-180 duration-700"></div>
-            <div className="w-[200px] h-[200px] border border-stone-700 z-50 absolute right-[50%] top-[50%] hover:rotate-180 duration-700"></div>
+            <div className="w-[200px] h-[200px] border border-red-500 z-50  absolute group hover:rotate-180 duration-700 2xl:w-[220px] 2xl:h-[220px]"></div>
+            <div className="w-[200px] h-[200px] border border-stone-600 z-40 absolute  left-[50%] bottom-[50%] hover:rotate-180 duration-700 2xl:w-[220px] 2xl:h-[220px]"></div>
+            <div className="w-[200px] h-[200px] border border-stone-700 z-50 absolute right-[50%] top-[50%] hover:rotate-180 duration-700 2xl:w-[220px] 2xl:h-[220px]"></div>
           </div>
         </section>
       </div>

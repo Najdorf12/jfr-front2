@@ -34,7 +34,7 @@ const Dates = () => {
     <>
       <section id="third_section" className="section before">
         <div className="w-full relative pt-14 pb-20 flex flex-col items-center gap-14 lg:pt-28 xl:gap-20">
-          <article className="z-50 text-6xl lg:text-[7.5rem] text-stone-300 flex flex-col font-title2 self-center ">
+          <article className="z-50 text-6xl lg:text-[6rem] text-stone-300 flex flex-col font-title2 self-center 2xl:text-[6.5rem] ">
             <h4 className="relative z-50">
               DATES
               <div

@@ -12,7 +12,7 @@ const Bio = () => {
         </Canvas>
       </div>
 
-      <article className="z-50 text-6xl lg:text-9xl text-stone-300 flex flex-col font-title2 self-center ">
+      <article className="z-50 text-6xl lg:text-9xl text-stone-300 flex flex-col font-title2 self-center 2xl:text-[8.5rem]">
         <h4 className="relative z-50">
           ABOUT ME
           <div
@@ -37,7 +37,7 @@ const Bio = () => {
           id="line-about"
           className="w-[40%] lg:w-[40%] h-[1px] bg-stone-300"
         ></div>
-        <p className="text-stone-400 px-3 text-center max-w-[600px] lg:max-w-[750px] text-balance font-title text-sm z-50">
+        <p className="text-stone-400 px-3 text-center max-w-[600px] lg:max-w-[750px] text-balance font-title text-sm z-50 2xl:text-base 2xl:max-w-[1000px]">
           JFR has an impressive catalog of productions on labels such as All Day
           I Dream, Anjunadeep, Musique de Lune, Clubsonica and more. After
           living for 5 years in Europe, where he played in the best clubs of the
