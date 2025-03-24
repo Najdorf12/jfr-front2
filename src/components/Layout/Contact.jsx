@@ -27,16 +27,17 @@ const Contact = () => {
     <>
       <div className="section after bg-zinc-800">
         <section className="w-full">
-          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-32 ">
+          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-28 ">
             <p className="text-2xl md:text-3xl lg:text-5xl font-title2 text-red-500 max-w-[1000px] ">
               JFR has become a crowd favorite, known for his sonic vitality and
               infectious energy behind the decks.
             </p>
-            <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:text-lg">
+            <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg">
               He is also a professor of electronic music production, Label
               Manager of Musique de Lune and founder of his own label and the
               popular radio series Secret Feelings.
             </p>
+            <div className="w-[50%] h-[1px] mt-6 bg-zinc-700 md:w-[20%] lg:mt-10"></div>
           </div>
         </section>
         <section
@@ -49,8 +50,8 @@ const Contact = () => {
                 LET'S TALK
               </h6>
               <p className="text-stone-600 text-base 2xl:text-lg">
-                For bookings, collaborations, or just to share your thoughts,
-                drop me a message.
+                For bookings, collaborations, or just to share your <br />{" "}
+                thoughts, drop me a message.
               </p>
             </article>
             <div className="w-full max-w-md  mt-12 font-title text-sm flex flex-col justify-center lg:mt-6 xl:max-w-[490px]">
@@ -87,25 +88,38 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <ul className="flex justify-center items-center gap-9 pt-8 text-stone-600 text-4xl lg:gap-12">
-              <li>
-                <i className="bx bxl-instagram hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
-              </li>
-              <li>
-                <i className="bx bxl-facebook hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
-              </li>
-              <li>
-                <i className="bx bxl-twitter hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
-              </li>
-              <li>
-                <i className="bx bxl-youtube hover:text-red-500 duration-500 hover:scale-105 hover:cursor-pointer"></i>
-              </li>
+            <ul className="flex justify-center items-center gap-9 pt-8 text-stone-600 text-4xl lg:text-5xl lg:gap-10">
+              <a href="https://www.instagram.com/jfrmusic">
+                <li>
+                  <i className="bx bxl-instagram hover:text-whiteCustom duration-500 hover:scale-105 hover:cursor-pointer"></i>
+                </li>
+              </a>
+              <a href="https://www.facebook.com/jfrmusicokk">
+                <li>
+                  <i className="bx bxl-facebook-circle hover:text-whiteCustom duration-500 hover:scale-105 hover:cursor-pointer"></i>
+                </li>
+              </a>
+              <a href="https://open.spotify.com/intl-es/artist/3EHPs3dPCgtxAywJxZWNRY">
+                <li>
+                  <i className="bx bxl-spotify hover:text-whiteCustom duration-500 hover:scale-105 hover:cursor-pointer"></i>
+                </li>
+              </a>
+              <a href="https://www.youtube.com/channel/UCtj3hTN3YeLg3wyO6-Ay7bw?view_as=subscriber">
+                <li>
+                  <i className="bx bxl-youtube hover:text-whiteCustom duration-500 hover:scale-105 hover:cursor-pointer"></i>
+                </li>
+              </a>
+              <a href="https://soundcloud.com/jfrmusicok">
+                <li>
+                  <i className="bx bxl-soundcloud hover:text-whiteCustom duration-500 hover:scale-105 hover:cursor-pointer"></i>
+                </li>
+              </a>
             </ul>
           </div>
           <div className="hidden lg:w-1/2 lg:flex items-center justify-center relative mt-12 ">
-            <div className="w-[200px] h-[200px] border border-red-500 z-50  absolute"></div>
-            <div className="w-[200px] h-[200px] border border-stone-600 z-40 absolute left-[50%] bottom-[50%]"></div>
-            <div className="w-[200px] h-[200px] border border-stone-700 z-50 absolute right-[50%] top-[50%]"></div>
+            <div className="w-[200px] h-[200px] border border-red-500 z-50  absolute group hover:rotate-180 duration-700"></div>
+            <div className="w-[200px] h-[200px] border border-stone-600 z-40 absolute  left-[50%] bottom-[50%] hover:rotate-180 duration-700"></div>
+            <div className="w-[200px] h-[200px] border border-stone-700 z-50 absolute right-[50%] top-[50%] hover:rotate-180 duration-700"></div>
           </div>
         </section>
       </div>

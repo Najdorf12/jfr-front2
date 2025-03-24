@@ -23,8 +23,8 @@ function JFR() {
   return (
     <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
       <main className="w-full bg-whiteCustom ">
-        <nav className="absolute w-screen px-10  py-4 flex flex-row-reverse justify-between items-center z-50 lg:px-[6%] xl:pt-6">
-          <img src={navimg} alt="" className="w-16 object-contain" />
+        <nav className="absolute w-screen px-10  py-4 flex flex-row-reverse justify-between items-center z-50 lg:px-[6%] xl:pt-7">
+          <img src={navimg} alt="" className="w-16 object-contain lg:w-20" />
           <div class="loader">
             <span class="bar"></span>
             <span class="bar"></span>

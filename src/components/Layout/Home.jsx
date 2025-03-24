@@ -58,28 +58,28 @@ const Home = () => {
         />
       </figure>
 
-      <article className="z-50 -ml-2 flex flex-col pb-14 lg:pl-[2%] xl:pb-0">
+      <article className="z-50 -ml-2 flex flex-col pb-14 lg:ml-[3%] xl:pb-0">
         <figure className="">
           <img
             ref={titleRef}
             src={imgTitle}
             alt="img-title"
-            className="w-[65%] md:w-[30%] ml-2"
+            className="w-[65%] md:w-[35%]"
           />
         </figure>
 
         <p
           ref={descriptionRef}
-          className="ml-6 mt-1 font-title text-sm text-stone-400 text-balance max-w-[600px] xl:ml-9 xl:text-base"
+          className="ml-6 mt-1 font-title text-sm text-stone-400 text-balance max-w-[600px] md:text-base lg:mt-0 xl:ml-12 xl:text-lg"
         >
           Argentine DJ and producer, crafting soulful <br />
           sounds for the world’s most iconic labels and stages.
         </p>
-        <div className="flex items-center gap-6 md:gap-8 text-stone-500 font-title pl-5 mt-6 lg:mt-9 xl:pl-8 text-lg lg:gap-10 2xl:text-xl">
+        <div className="flex items-center gap-6 md:gap-8 text-stone-500 font-title ml-5 mt-6 lg:mt-9 xl:ml-12 text-lg lg:gap-10 2xl:text-xl">
           <a href="#third_section">
             <button
               ref={btnHome1}
-              className="border border-red-600 rounded-full py-[2px] w-44 pl-4 pr-2  flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-48"
+              className="border border-red-600 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 hover:bg-zinc-800 duration-500 hover:border-whiteCustom"
             >
               Dates
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
@@ -88,7 +88,7 @@ const Home = () => {
           <a href="#contact_section">
             <button
               ref={btnHome2}
-              className="border border-stone-500  rounded-full py-[2px]  w-44 pl-4 pr-2  flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-48"
+              className="border border-stone-500 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 hover:bg-zinc-800 duration-500 hover:border-whiteCustom"
             >
               Contact
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>

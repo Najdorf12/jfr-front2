@@ -16,6 +16,8 @@ const spotify = [
   },
 ];
 
+/* https://www.beatport.com/artist/jfr/600619 */
+
 const PlayList = () => {
   return (
     <section className="w-full flex flex-col gap-24 px-3 py-20 justify-center items-center lg:flex-row lg:pt-24 lg:pb-36">

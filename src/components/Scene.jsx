@@ -22,7 +22,7 @@ export function Sphere({ windowWidth, ...restprops }) {
       },
     })
       .to("#text-about", {
-        y: windowWidth < 700 ? "25px" : "45px",
+        y: windowWidth < 700 ? "21px" : "45px",
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
@@ -33,7 +33,7 @@ export function Sphere({ windowWidth, ...restprops }) {
         },
       })
       .to("#text-about2", {
-        y: windowWidth < 700 ? "60px" : "95px",
+        y: windowWidth < 700 ? "56px" : "95px",
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",

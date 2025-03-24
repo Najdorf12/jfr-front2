@@ -17,14 +17,14 @@ const Bio = () => {
           ABOUT ME
           <div
             style={{ WebkitTextStroke: "2px  #d6d3d1", color: "transparent" }}
-            className="text-stone-200 absolute inset-0 z-30"
+            className="text-stone-300 absolute inset-0 z-30"
             id="text-about"
           >
             ABOUT ME
           </div>
           <div
             style={{ WebkitTextStroke: "2px #e7e5e4", color: "transparent" }}
-            className="text-stone-300 absolute inset-0 z-30"
+            className="absolute inset-0 z-20"
             id="text-about2"
           >
             ABOUT ME
