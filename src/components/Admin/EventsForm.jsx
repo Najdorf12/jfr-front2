@@ -5,6 +5,7 @@ import { createEvent, updateEvent } from "../../config/handlers";
 import { deleteEvent as deleteEventApi } from "../../config/handlers";
 
 const EventsForm = ({ events, setEvents }) => {
+  console.log(events)
   const {
     handleSubmit,
     register,
@@ -13,6 +14,8 @@ const EventsForm = ({ events, setEvents }) => {
   } = useForm();
 
   const [eventSelected, setEventSelected] = useState(null);
+  const [images, setImages] = useState([]);
+  const [loadingImage, setLoadingImage] = useState(false);
 
   useEffect(() => {
     if (eventSelected) {
@@ -23,7 +26,9 @@ const EventsForm = ({ events, setEvents }) => {
         location: eventSelected.location,
         date: eventSelected.date,
         isActive: eventSelected.isActive,
+        images: eventSelected.images,
       });
+      setImages(eventSelected.images || []);
     } else {
       reset({
         _id: "",
@@ -32,14 +37,62 @@ const EventsForm = ({ events, setEvents }) => {
         location: "",
         date: "",
         isActive: false,
+        images: "",
       });
+      setImages([]);
     }
   }, [eventSelected]);
 
+  async function handleImage(e) {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "JFR");
+    data.append("folder", "JFR");
+
+    setLoadingImage(true);
+    try {
+      const res = await fetch(
+        "https://api.cloudinary.com/v1_1/najdorf/image/upload",
+        {
+          method: "POST",
+          body: data,
+        }
+      );
+      const file = await res.json();
+      setImages([
+        ...images,
+        {
+          public_id: file.public_id,
+          secure_url: file.secure_url,
+        },
+      ]);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoadingImage(false);
+    }
+  }
+
+  const handleDeleteImage = (img) => {
+    setImages(images.filter((image) => image.public_id !== img.public_id));
+    axios
+      .delete(`/events/delete-image/${encodeURIComponent(img.public_id)}`)
+      .then(() => console.log("Imagen eliminada de Cloudinary"))
+      .catch((error) =>
+        console.error("Error al eliminar imagen de Cloudinary", error)
+      );
+  };
+
   const submit = async (data) => {
+    const eventData = {
+      ...data,
+      images: images.length > 0 ? images : noticeSelected?.images || [], // Si no hay imágenes nuevas, conserva las anteriores
+    };
+
     try {
       if (eventSelected) {
-        const updatedEvent = await editEvent(data);
+        const updatedEvent = await editEvent(eventData);
         setEvents((prevEvents) =>
           prevEvents.map((event) =>
             event._id === updatedEvent._id ? updatedEvent : event
@@ -47,16 +100,13 @@ const EventsForm = ({ events, setEvents }) => {
         );
       } else {
         const newEvent = await createEvent({
-          title: data.title,
-          description: data.description,
-          location: data.location,
-          date: data.date,
-          isActive: data.isActive,
+          ...eventData,
         });
         setEvents((prevEvents) => [...prevEvents, newEvent]);
       }
       setEventSelected(null);
       reset();
+      setImages([]);
       alert("Evento guardado exitosamente");
     } catch (error) {
       console.error("Error al guardar el evento:", error);
@@ -77,7 +127,6 @@ const EventsForm = ({ events, setEvents }) => {
       console.error("Error al eliminar el evento:", error);
     }
   };
-
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
@@ -178,6 +227,41 @@ const EventsForm = ({ events, setEvents }) => {
               </svg>
             </label>
           </div>
+          <div className="flex flex-col items-center gap-5 ">
+            <label className="font-light text-zinc-500 text-xl font-text">
+              Imágenes
+            </label>
+            <input
+              type="file"
+              name="image"
+              accept=".jpg, .png, .jpeg"
+              onChange={(e) => handleImage(e)}
+              className=" rounded-lg flex-1  appearance-none w-full  max-w-[400px] py-2 px-4 border border-zinc-600 text-white placeholder-white text-sm focus:outline-none focus:border-transparent"
+            />
+            {loadingImage ? (
+              <h3>Cargando imagen...</h3>
+            ) : (
+              <div className="lg:flex gap-5 xl:gap-10">
+                {images?.map((img) => (
+                  <div key={img?.public_id} className="relative">
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteImage(img)}
+                      className="absolute right-0 px-2 border-2 border-zinc-600  flex items-center rounded-sm font-bold text-white bg-red-700"
+                    >
+                      X
+                    </button>
+                    <img
+                      className="w-32 h-32 object-cover 2xl:w-36 2xl:h-36"
+                      src={img?.secure_url}
+                      alt=""
+                      width="300px"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           <div className="flex items-center justify-center ">
             <button
               className="w-full font-title  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:bg-rose-600 hover:text-whiteCustom font-semibold transition duration-500 text-rose-600 xl:w-[80%] xl:self-center"
@@ -190,7 +274,7 @@ const EventsForm = ({ events, setEvents }) => {
       </section>
 
       <section className="w-full flex flex-wrap items-center justify-center gap-8 mt-14 xl:mt-20">
-        {events.map((event, i) => (
+        {events?.map((event, i) => (
           <CardAdminEvent
             key={i}
             event={event}
