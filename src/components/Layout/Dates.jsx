@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgDates from "/images2025/compressed/img-dates.jpg";
@@ -14,6 +14,8 @@ import CardDate from "./CardDate";
 gsap.registerPlugin(ScrollTrigger);
 
 const Dates = () => {
+  const [video, setVideo] = useState(false);
+
   useLayoutEffect(() => {
     const scales = [4, 5, 6, 8, 9, 7, 5];
 
@@ -30,6 +32,11 @@ const Dates = () => {
       });
     });
   }, []);
+
+  const handleShowVideo = () => {
+    setVideo(!video);
+  };
+
   return (
     <>
       <section id="third_section" className="section before">
@@ -74,14 +81,30 @@ const Dates = () => {
             <div className="imageContainer relative">
               <div className="absolute inset-0  flex items-start mt-3  justify-center">
                 <div
+                  onClick={handleShowVideo}
                   id="box-glass"
-                  className="flex items-center border-[0.1px] border-stone-300  justify-center  text-stone-300  gap-6 rounded-full font-title"
+                  className="flex items-center border-[0.1px] border-stone-300  justify-center  text-stone-300  gap-6 rounded-full font-title z-[100]"
                 >
-                  <span className="text-[5px] pl-1 pr-[1px] pt-[1.6px]">Enjoy</span>
+                  <span className="text-[5px] pl-1 pr-[1px] pt-[1.4px]">
+                    Enjoy
+                  </span>
                   <i className="bx bx-right-arrow text-[8px] pt-[1px] text-stone-300 rounded-full "></i>
                 </div>
               </div>
-              <img src={imgDates} alt="" loading="lazy" />
+              {video ? (
+                <div className="w-full h-full relative overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/XbopdG7asHI?start=12&autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" 
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : (
+                <img src={imgDates} alt="" loading="lazy" />
+              )}
             </div>
           </div>
           <div className="el">
