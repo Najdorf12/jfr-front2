@@ -26,7 +26,7 @@ export function Sphere({ windowWidth, ...restprops }) {
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
-          start: "5% bottom",
+          start: "20% bottom",
           end: "top top",
           scrub: true,
           immediateRender: false,
@@ -37,29 +37,18 @@ export function Sphere({ windowWidth, ...restprops }) {
         ease: "power1",
         scrollTrigger: {
           trigger: "#second_section",
-          start: "5% bottom",
+          start: "20% bottom",
           end: "top top",
           scrub: true,
           immediateRender: false,
         },
       })
-    /*   .to("#text-dates", {
-        x: windowWidth < 700 ? "40px" : "45px",
-        ease: "power1",
-        scrollTrigger: {
-          trigger: "#third_section",
-          start: "5% bottom",
-          end: "top top",
-          scrub: true,
-          immediateRender: false,
-        },
-      }) */
       .to("#text-dates2", {
         x: windowWidth < 700 ? "40px" : "95px",
         ease: "power1",
         scrollTrigger: {
           trigger: "#third_section",
-          start: "5% bottom",
+          start: "20% bottom",
           end: "top top",
           scrub: true,
           immediateRender: false,

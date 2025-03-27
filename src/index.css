@@ -15,6 +15,10 @@
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
+#box-glass2 {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
 ::-webkit-scrollbar {
   display: none;
 }
@@ -175,9 +179,3 @@
   height: 20vh;
 }
 
-/* @media (min-width: 1000px) {
-  .bar {
-    width: 3px;
-    height: 20px;
-  }
-} */

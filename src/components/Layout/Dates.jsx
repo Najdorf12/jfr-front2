@@ -70,8 +70,17 @@ const Dates = () => {
       <div className="w-full md:h-[9vh]"></div>
       <div className="container-images">
         <div className="sticky">
-          <div className="el">
-            <div className="imageContainer">
+          <div className="el z-50">
+            <div className="imageContainer relative">
+              <div className="absolute inset-0  flex items-start mt-3  justify-center">
+                <div
+                  id="box-glass"
+                  className="flex items-center border-[0.1px] border-stone-300  justify-center  text-stone-300  gap-6 rounded-full font-title"
+                >
+                  <span className="text-[5px] pl-1 pr-[1px] pt-[1.6px]">Enjoy</span>
+                  <i className="bx bx-right-arrow text-[8px] pt-[1px] text-stone-300 rounded-full "></i>
+                </div>
+              </div>
               <img src={imgDates} alt="" loading="lazy" />
             </div>
           </div>

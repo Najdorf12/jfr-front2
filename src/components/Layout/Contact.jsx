@@ -88,7 +88,7 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <ul className="flex justify-center items-center gap-9 pt-8 text-stone-600 text-4xl lg:text-5xl lg:gap-10">
+            <ul className="flex justify-center items-center gap-8 pt-8 text-stone-600 text-4xl lg:text-[2.8rem] lg:gap-10">
               <a href="https://www.instagram.com/jfrmusic">
                 <li>
                   <i className="bx bxl-instagram hover:text-whiteCustom duration-500 hover:scale-105 hover:cursor-pointer"></i>
