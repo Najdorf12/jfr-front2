@@ -77,14 +77,14 @@ const Home = () => {
         </p>
         <div className="flex items-center gap-6 md:gap-8 text-stone-500 font-title ml-5 mt-6 lg:mt-9 xl:ml-12 text-lg lg:gap-10 2xl:text-xl">
           <a ref={btnHome1} href="#third_section">
-            <button className="border border-red-600 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:bg-zinc-800 duration-500 hover:border-whiteCustom">
+            <button className="border border-red-600 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:text-whiteCustom duration-500 hover:border-whiteCustom">
               Dates
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
             </button>
           </a>
 
           <a ref={btnHome2} href="#contact_section">
-            <button className="border border-stone-500 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:bg-zinc-800 duration-500 hover:border-whiteCustom">
+            <button className="border border-stone-500 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:text-whiteCustom duration-500 hover:border-whiteCustom">
               Contact
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
             </button>

@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import CardAdminEvent from "./CardAdminEvent";
 import { createEvent, updateEvent } from "../../config/handlers";
 import { deleteEvent as deleteEventApi } from "../../config/handlers";
+import imgAlternative from "/images2025/compressed/play02.jpeg";
+import { getEvents } from "../../config/handlers";
+import axios from "../../config/axios";
 
-const EventsForm = ({ events, setEvents }) => {
-  console.log(events)
+const EventsForm = () => {
   const {
     handleSubmit,
     register,
@@ -13,9 +15,24 @@ const EventsForm = ({ events, setEvents }) => {
     formState: { errors },
   } = useForm();
 
+  const [events, setEvents] = useState([]);
   const [eventSelected, setEventSelected] = useState(null);
   const [images, setImages] = useState([]);
   const [loadingImage, setLoadingImage] = useState(false);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const eventsData = await getEvents();
+        setEvents(eventsData);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
 
   useEffect(() => {
     if (eventSelected) {
@@ -47,7 +64,7 @@ const EventsForm = ({ events, setEvents }) => {
     const files = e.target.files;
     const data = new FormData();
     data.append("file", files[0]);
-    data.append("upload_preset", "JFR");
+    data.append("upload_preset", "jfr-images");
     data.append("folder", "JFR");
 
     setLoadingImage(true);
@@ -68,11 +85,12 @@ const EventsForm = ({ events, setEvents }) => {
         },
       ]);
     } catch (error) {
-      console.error(error);
+      console.log(error);
     } finally {
       setLoadingImage(false);
     }
   }
+ 
 
   const handleDeleteImage = (img) => {
     setImages(images.filter((image) => image.public_id !== img.public_id));
@@ -87,7 +105,7 @@ const EventsForm = ({ events, setEvents }) => {
   const submit = async (data) => {
     const eventData = {
       ...data,
-      images: images.length > 0 ? images : noticeSelected?.images || [], // Si no hay imágenes nuevas, conserva las anteriores
+      images: images.length > 0 ? images : eventSelected?.images || [], // Si no hay imágenes nuevas, conserva las anteriores
     };
 
     try {
@@ -130,11 +148,14 @@ const EventsForm = ({ events, setEvents }) => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <section className="w-full rounded-xl border-zinc-700 border overflow-hidden py-6 px-4 space-y-6 md:space-y-7 md:w-[550px] xl:w-[830px] xl:space-y-14 xl:px-8 xl:py-9">
-        <h2 className="text-center font-title2 text-5xl font-normal text-whiteCustom md:text-6xl xl:text-7xl 2xl:text-8xl">
+      <section className="w-full relative rounded-xl border-zinc-700 border overflow-hidden py-6 px-4 space-y-6 md:space-y-7 md:w-[550px] xl:w-[830px] xl:space-y-14 xl:px-8 xl:py-9">
+        <figure className="absolute inset-0 w-full">
+          <img src={imgAlternative} alt=""  className="w-full h-full z-20 object-cover object-center opacity-20"/>
+        </figure>
+        <h2 className="text-center font-title2 relative text-5xl font-normal text-whiteCustom md:text-6xl xl:text-7xl 2xl:text-8xl">
           EVENTOS
         </h2>
-        <p className="text-center text-zinc-500 font-title text-base  xl:text-xl 2xl:text-xl">
+        <p className="text-center relative text-zinc-500 font-title text-base  xl:text-xl 2xl:text-xl">
           Crea un nuevo evento
         </p>
         <form onSubmit={handleSubmit(submit)} className="space-y-7">
@@ -143,7 +164,7 @@ const EventsForm = ({ events, setEvents }) => {
               <input
                 autoComplete="off"
                 placeholder="Joe Doe"
-                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-rose-600"
+                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-red-600"
                 name="title"
                 {...register("title", {
                   required: {
@@ -160,7 +181,7 @@ const EventsForm = ({ events, setEvents }) => {
               <input
                 autoComplete="off"
                 placeholder="description"
-                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-rose-600"
+                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-red-600"
                 name="description"
                 {...register("description", {
                   required: {
@@ -179,7 +200,7 @@ const EventsForm = ({ events, setEvents }) => {
               <input
                 autoComplete="off"
                 placeholder="john@example.com"
-                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-rose-600 "
+                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-red-600 "
                 name="location"
                 {...register("location", {
                   required: {
@@ -196,7 +217,7 @@ const EventsForm = ({ events, setEvents }) => {
               <input
                 autoComplete="off"
                 placeholder="john@example.com"
-                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-rose-600 "
+                className="peer h-10 w-full border-b-2 border-zinc-600 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-red-600 "
                 name="date"
                 {...register("date", {
                   required: {
@@ -227,7 +248,7 @@ const EventsForm = ({ events, setEvents }) => {
               </svg>
             </label>
           </div>
-          <div className="flex flex-col items-center gap-5 ">
+          <div className="relative flex flex-col items-center gap-5 ">
             <label className="font-light text-zinc-500 text-xl font-text">
               Imágenes
             </label>
@@ -242,8 +263,8 @@ const EventsForm = ({ events, setEvents }) => {
               <h3>Cargando imagen...</h3>
             ) : (
               <div className="lg:flex gap-5 xl:gap-10">
-                {images?.map((img) => (
-                  <div key={img?.public_id} className="relative">
+                {images?.map((img, i) => (
+                  <div key={i} className="relative">
                     <button
                       type="button"
                       onClick={() => handleDeleteImage(img)}
@@ -262,9 +283,9 @@ const EventsForm = ({ events, setEvents }) => {
               </div>
             )}
           </div>
-          <div className="flex items-center justify-center ">
+          <div id="box-glass" className="relative flex items-center justify-center ">
             <button
-              className="w-full font-title  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:bg-rose-600 hover:text-whiteCustom font-semibold transition duration-500 text-rose-600 xl:w-[80%] xl:self-center"
+              className="w-full font-title  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:border-red-500 hover:text-whiteCustom font-semibold transition duration-500 text-red-600 xl:w-[80%] xl:self-center"
               type="submit"
             >
               Submit
