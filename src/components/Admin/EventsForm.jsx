@@ -328,7 +328,7 @@ const EventsForm = () => {
         </form>
       </section>
 
-      <section className="w-full flex flex-wrap items-center justify-center gap-8 mt-16 xl:mt-32 xl:gap-10 2xl:px-[10%]">
+      <section className="w-full flex flex-wrap items-center justify-center gap-8 mt-16 xl:mt-32 xl:gap-20 xl:px-[10%]">
         {events?.map((event, i) => (
           <CardAdminEvent
             key={i}
