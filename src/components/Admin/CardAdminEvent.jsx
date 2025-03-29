@@ -1,11 +1,17 @@
 import imgAlternative from "/images2025/compressed/play02.jpeg";
 
 const CardAdminEvent = ({ event, onDelete, onEdit }) => {
-  const { title, description, date, time, location, images } = event;
+  const { title, description, date, time, location, images = [] } = event;
+
+  const hasValidImages = images.length > 0 && images[0]?.secure_url;
   return (
-    <div className="text-base  font-title text-balance w-full border border-zinc-700 pb-1 rounded-lg max-w-[500px] xl:pb-2">
+    <div className="text-base  font-title text-balance w-full border border-zinc-700 pb-1 rounded-lg max-w-[400px] xl:pb-2">
       <figure className="w-full h-[400px] overflow-hidden rounded-t-lg">
-         <img src={images.length > 0 ? images[0].secure_url : imgAlternative} alt="" className="w-full h-[400px] object-cover object-center rounded-t-lg" />
+        <img
+          src={hasValidImages ? images[0].secure_url : imgAlternative}
+          alt={title || "Event image"}
+          className="w-full h-[400px] object-cover object-center rounded-t-lg"
+        />
       </figure>
       <article className="flex  flex-col gap-2 text-zinc-400 font-title ">
         <h6 className="text-lg px-3 bg-zinc-700 text-whiteCustom py-2 lg:px-3 lg:py-3">

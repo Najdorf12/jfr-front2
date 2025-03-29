@@ -14,7 +14,6 @@ const EventsForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-
   const [events, setEvents] = useState([]);
   const [eventSelected, setEventSelected] = useState(null);
   const [images, setImages] = useState([]);
@@ -32,7 +31,6 @@ const EventsForm = () => {
 
     fetchEvents();
   }, []);
-
 
   useEffect(() => {
     if (eventSelected) {
@@ -90,17 +88,6 @@ const EventsForm = () => {
       setLoadingImage(false);
     }
   }
- 
-
-  const handleDeleteImage = (img) => {
-    setImages(images.filter((image) => image.public_id !== img.public_id));
-    axios
-      .delete(`/events/delete-image/${encodeURIComponent(img.public_id)}`)
-      .then(() => console.log("Imagen eliminada de Cloudinary"))
-      .catch((error) =>
-        console.error("Error al eliminar imagen de Cloudinary", error)
-      );
-  };
 
   const submit = async (data) => {
     const eventData = {
@@ -145,12 +132,56 @@ const EventsForm = () => {
       console.error("Error al eliminar el evento:", error);
     }
   };
+  const handleDeleteImage = (img) => {
+    // 1. Actualizar estado local de imágenes
+    const newImages = images.filter(
+      (image) => image.public_id !== img.public_id
+    );
+    setImages(newImages);
 
+    // 2. Si estamos editando un evento, actualizar también el evento seleccionado
+    if (eventSelected) {
+      setEventSelected({
+        ...eventSelected,
+        images: eventSelected.images.filter(
+          (image) => image.public_id !== img.public_id
+        ),
+      });
+    }
+
+    // 3. Eliminar de Cloudinary y MongoDB
+    axios
+      .delete(`events/delete-image/${encodeURIComponent(img.public_id)}`)
+      .then(() => {
+        console.log("Imagen eliminada de Cloudinary");
+        // 4. Actualizar la lista de eventos
+        setEvents((prevEvents) =>
+          prevEvents.map((event) => ({
+            ...event,
+            images: event.images.filter(
+              (image) => image.public_id !== img.public_id
+            ),
+          }))
+        ); // <-- Aquí faltaba este paréntesis
+      })
+      .catch((error) => {
+        console.error("Error al eliminar imagen de Cloudinary", error);
+        // Revertir cambios si falla
+        setImages(images);
+        if (eventSelected) {
+          setEventSelected(eventSelected);
+        }
+      });
+  };
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <section className="w-full relative rounded-xl border-zinc-700 border overflow-hidden py-6 px-4 space-y-6 md:space-y-7 md:w-[550px] xl:w-[830px] xl:space-y-14 xl:px-8 xl:py-9">
         <figure className="absolute inset-0 w-full">
-          <img src={imgAlternative} alt=""  className="w-full h-full z-20 object-cover object-center opacity-20"/>
+          <img
+            src={imgAlternative}
+            alt=""
+            className="w-full h-full z-20 object-cover object-center opacity-20"
+          />
         </figure>
         <h2 className="text-center font-title2 relative text-5xl font-normal text-whiteCustom md:text-6xl xl:text-7xl 2xl:text-8xl">
           EVENTOS
@@ -283,7 +314,10 @@ const EventsForm = () => {
               </div>
             )}
           </div>
-          <div id="box-glass" className="relative flex items-center justify-center ">
+          <div
+            id="box-glass"
+            className="relative flex items-center justify-center "
+          >
             <button
               className="w-full font-title  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:border-red-500 hover:text-whiteCustom font-semibold transition duration-500 text-red-600 xl:w-[80%] xl:self-center"
               type="submit"
@@ -294,7 +328,7 @@ const EventsForm = () => {
         </form>
       </section>
 
-      <section className="w-full flex flex-wrap items-center justify-center gap-8 mt-14 xl:mt-20">
+      <section className="w-full flex flex-wrap items-center justify-center gap-8 mt-16 xl:mt-32 xl:gap-10 2xl:px-[10%]">
         {events?.map((event, i) => (
           <CardAdminEvent
             key={i}
