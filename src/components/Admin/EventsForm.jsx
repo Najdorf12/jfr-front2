@@ -279,17 +279,29 @@ const EventsForm = () => {
               </svg>
             </label>
           </div>
-          <div className="relative flex flex-col items-center gap-5 ">
-            <label className="font-light text-zinc-500 text-xl font-text">
+          <div className="flex flex-col items-center gap-3 font-text py-3">
+            <label
+              htmlFor="imageUpload"
+              className="font-light text-zinc-500 text-xl"
+            >
               Imágenes
             </label>
-            <input
-              type="file"
-              name="image"
-              accept=".jpg, .png, .jpeg"
-              onChange={(e) => handleImage(e)}
-              className=" rounded-lg flex-1  appearance-none w-full  max-w-[400px] py-2 px-4 border border-zinc-600 text-white placeholder-white text-sm focus:outline-none focus:border-transparent"
-            />
+            <div className="relative">
+              <input
+                id="imageUpload"
+                type="file"
+                name="image"
+                accept=".jpg, .png, .jpeg"
+                onChange={(e) => handleImage(e)}
+                className="hidden"
+              />
+              <label
+                htmlFor="imageUpload"
+                className="rounded-lg flex-1 appearance-none w-full max-w-[400px] py-3 px-12 border border-zinc-600 text-whiteCustom placeholder-white text-sm focus:outline-none focus:border-transparent cursor-pointer "
+              >
+                Seleccionar archivo
+              </label>
+            </div>
             {loadingImage ? (
               <h3>Cargando imagen...</h3>
             ) : (
@@ -314,11 +326,9 @@ const EventsForm = () => {
               </div>
             )}
           </div>
-          <div
-            id="box-glass"
-            className="relative flex items-center justify-center "
-          >
+          <div className="relative flex items-center justify-center ">
             <button
+              id="box-glass"
               className="w-full font-title  py-2 px-4 border-[1px] border-zinc-600 rounded-md shadow-lg hover:border-red-500 hover:text-whiteCustom font-semibold transition duration-500 text-red-600 xl:w-[80%] xl:self-center"
               type="submit"
             >
