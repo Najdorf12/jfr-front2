@@ -27,10 +27,10 @@ const Contact = () => {
     <>
       <div className="section after bg-zinc-800">
         <section className="w-full">
-          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-28">
-            <p className="text-2xl md:text-3xl lg:text-5xl font-title2 text-red-500 max-w-[1000px] 2xl:text-[3.3rem] 2xl:max-w-[1100px]">
-              JFR has become a crowd favorite, known for his sonic vitality and
-              infectious energy behind the decks
+          <div className="w-full flex flex-col text-center text-pretty mt-20 justify-center items-center px-3 md:px-6 lg:flex-col xl:mt-24">
+            <p className="text-2xl md:text-3xl lg:text-5xl font-title2 text-stone-700 max-w-[1000px] 2xl:text-[3.3rem] 2xl:max-w-[1100px]">
+              JFR has become a crowd favorite, known for his{" "}
+              <span className="text-red-500">sonic vitality and infectious energy</span> behind the decks
             </p>
             <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg 2xl:text-xl 2xl:mt-10">
               He is also a professor of electronic music production, Label
@@ -42,14 +42,14 @@ const Contact = () => {
         </section>
         <section
           id="contact_section"
-          className="w-full lg:flex lg:flex-row mt-12 "
+          className="w-full lg:flex lg:flex-row mt-12 xl:mt-16 "
         >
           <div className="w-full relative font-title h-screen flex flex-col justify-start items-center md:justify-center lg:w-1/2 lg:self-start ">
             <article className="flex flex-col pt-16 justify-center items-center text-balance text-center gap-6 lg:pt-0 xl:gap-6">
               <h6 className="font-text2 font-semibold text-6xl text-whiteCustom lg:text-7xl 2xl:text-8xl">
                 LET'S TALK
               </h6>
-              <p className="text-stone-600 text-base px-3 max-w-[500px] 2xl:text-lg ">
+              <p className="text-stone-700 text-base px-3 max-w-[500px] xl:text-lg ">
                 For bookings, collaborations, or just to share your thoughts,
                 drop me a message
               </p>
