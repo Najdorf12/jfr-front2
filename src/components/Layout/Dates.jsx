@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgDates from "/images2025/compressed/img-dates.jpg";
@@ -6,9 +6,6 @@ import imgJfr2 from "/images2025/compressed/07.webp";
 import imgJfr3 from "/images2025/compressed/02.webp";
 import imgJfr6 from "/images2025/compressed/03.webp";
 import imgJfr4 from "/images2025/compressed/08.jpg";
-import PlayList from "./Playlist";
-/* import imgJfr5 from "/images2025/compressed/07.webp";
-import imgJfr7 from "/images2025/compressed/05.webp"; */
 import CardDate from "./CardDate";
 
 gsap.registerPlugin(ScrollTrigger);

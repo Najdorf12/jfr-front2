@@ -32,12 +32,12 @@ const Contact = () => {
               JFR has become a crowd favorite, known for his{" "}
               <span className="text-red-500">sonic vitality and infectious energy</span> behind the decks
             </p>
-            <p className="relative mt-6 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg 2xl:text-xl 2xl:mt-10">
+            <p className="relative mt-7 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg 2xl:text-xl 2xl:mt-10">
               He is also a professor of electronic music production, Label
               Manager of Musique de Lune and founder of his own label and the
               popular radio series Secret Feelings
             </p>
-            <div className="w-[50%] h-[1px] mt-6 bg-zinc-700 md:w-[20%] lg:mt-10 2xl:mt-12"></div>
+            <div className="w-[40%] h-[1px] mt-7 bg-zinc-700 md:w-[15%] lg:mt-10 2xl:mt-12"></div>
           </div>
         </section>
         <section
@@ -54,7 +54,7 @@ const Contact = () => {
                 drop me a message
               </p>
             </article>
-            <div className="w-full max-w-md  mt-12 font-title text-sm flex flex-col justify-center lg:mt-6 xl:max-w-[490px]">
+            <div className="w-full max-w-md  mt-6 font-title text-sm flex flex-col justify-center lg:mt-6 xl:max-w-[490px]">
               <div className="w-full max-w-md bg-gray-800 rounded-lg p-6 xl:max-w-[900px]">
                 <form
                   onSubmit={handleSubmit(onSubmit)}
