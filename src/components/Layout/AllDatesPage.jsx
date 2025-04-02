@@ -121,8 +121,8 @@ const AllDatesPage = () => {
                   } `}
                 >
                   <img
-                    className="image-dates rounded-md opacity-0 z-50 w-full h-full max-w-[450px] object-cover object-center md:max-w-[300px]"
-                    src={flayer}
+                    className="image-dates rounded-md opacity-0 z-50 w-full h-full max-w-[450px] object-cover object-center md:max-w-[300px] 2xl:max-w-[350px]"
+                    src={event?.images?.length < 0 ? flayer : event?.images[0]?.secure_url}
                     alt="img-flayer"
                   />
                 </figure>
@@ -132,13 +132,13 @@ const AllDatesPage = () => {
                   } `}
                 >
                   <article
-                    className={`article_dates text-sm w-full opacity-0 py-2 pl-3 rounded-md font-title flex flex-col gap-1 text-stone-600 border max-w-md ${
+                    className={`article_dates text-sm w-full opacity-0 py-2 pl-3 rounded-md font-title flex flex-col gap-1 text-stone-600 border max-w-md 2xl:text-base 2xl:mt-12 ${
                       index % 2 !== 0
                         ? "items-start"
                         : "items-start justify-start"
                     } `}
                   >
-                    <h2 className="text-base font-title2 text-stone-500">
+                    <h2 className="text-base font-title2 text-stone-500 2xl:text-lg ">
                       {event?.title}
                     </h2>
                     <p className="mt-1 lg:mt-3">{event?.date}</p>
