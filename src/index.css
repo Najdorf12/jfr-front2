@@ -179,3 +179,10 @@
   height: 20vh;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 33.3vh;
+  width: 100%;
+}
