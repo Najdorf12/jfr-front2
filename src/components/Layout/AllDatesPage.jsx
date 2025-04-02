@@ -77,7 +77,7 @@ const AllDatesPage = () => {
   };
 
   return (
-    <section className="w-full min-h-screen pb-[30vh] bg-zinc-800 flex flex-col items-center justify-center text-white">
+    <section className="w-full min-h-screen pb-[30vh] bg-zinc-800 flex flex-col items-center justify-center text-white overflow-hidden">
       <nav className="w-full px-6 py-4 flex flex-row justify-between items-center z-50 lg:px-[10%] xl:pt-7">
         <div className="flex items-center gap-4">
           <div className="loader">

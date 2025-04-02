@@ -70,7 +70,7 @@ const Dates = () => {
             <CardDate />
           </div>
           <a href="/dates">
-            <button className="border border-stone-300 font-title text-stone-400 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between relative xl:w-56 xl:py-1 2xl:w-56 hover:text-stone-500 duration-500 hover:border-red-500">
+            <button className="border border-stone-300 font-title text-stone-400 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between relative xl:w-56 xl:py-1 2xl:w-56  duration-500 hover:border-stone-500">
               See more
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1 xl:text-3xl"></i>
             </button>
