@@ -111,7 +111,7 @@ const AllDatesPage = () => {
               <div
                 ref={addToRefs}
                 key={event?._id}
-                className={`w-full flex flex-col justify-center items-center lg:flex-row gap-4 lg:gap-24 lg:items-start  ${
+                className={`w-full flex flex-col justify-center items-center lg:flex-row gap-4 lg:gap-24 lg:items-start lg:mt-[32px]  ${
                   index % 2 !== 0 ? "lg:flex-row-reverse" : ""
                 } `}
               >
@@ -132,7 +132,7 @@ const AllDatesPage = () => {
                   } `}
                 >
                   <article
-                    className={`article_dates text-sm w-full opacity-0 py-2 pl-3 rounded-md font-title flex flex-col gap-1 text-stone-600 border max-w-md 2xl:text-base 2xl:mt-12 ${
+                    className={`article_dates text-sm w-full opacity-0 py-2 pl-3 rounded-md font-title flex flex-col gap-1 text-stone-600 border max-w-md 2xl:text-base lg:-mt-1 2xl:mt-12 ${
                       index % 2 !== 0
                         ? "items-start"
                         : "items-start justify-start"
