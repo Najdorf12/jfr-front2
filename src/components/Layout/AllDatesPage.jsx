@@ -37,27 +37,29 @@ const AllDatesPage = () => {
         ease: "power1",
         scrollTrigger: {
           trigger: container,
-          start: windowWidth < 700 ? "10% bottom" : "40% bottom",
-          end: windowWidth < 700 ? "30% 30%" : "40% 50%",
+          start: windowWidth < 700 ? "10% bottom" : "20% bottom",
+          end: windowWidth < 700 ? "40% 40%" : "50% 50%",
           scrub: true,
           immediateRender: false,
-          /*  markers: true,
-          id: `image-anim-${index}`,  */
+          /* markers: true,
+          id: `image-anim-${index}`, */
         },
       });
       gsap.to(article, {
-        y: windowWidth < 700 ? "-120" : "",
+        y: windowWidth < 700 ? "-120" : "150",
         x: windowWidth < 700 ? "100" : "",
+        scale: windowWidth < 700 ? 1 : 1.1,
+
         opacity: 1,
         ease: "power1",
         scrollTrigger: {
           trigger: container,
-          start: windowWidth < 700 ? "60% bottom" : "70% bottom",
-          end: windowWidth < 700 ? "50% 50%" : "bottom top",
+          start: windowWidth < 700 ? "60% bottom" : "10% bottom",
+          end: windowWidth < 700 ? "50% 50%" : "50% 50%",
           scrub: true,
           immediateRender: false,
-          /* markers: true,
-          id: `article-anim-${index}`,  */
+          /*    markers: true,
+          id: `article-anim-${index}`, */
         },
       });
     });
@@ -75,7 +77,7 @@ const AllDatesPage = () => {
   };
 
   return (
-    <section className="w-full min-h-screen pb-[60vh] bg-zinc-800 flex flex-col items-center justify-center text-white">
+    <section className="w-full min-h-screen pb-[30vh] bg-zinc-800 flex flex-col items-center justify-center text-white">
       <nav className="w-full px-6 py-4 flex flex-row justify-between items-center z-50 lg:px-[10%] xl:pt-7">
         <div className="flex items-center gap-4">
           <div className="loader">
@@ -92,31 +94,47 @@ const AllDatesPage = () => {
         </ul>
       </nav>
       <div className="w-full flex flex-col items-center justify-center mt-12 px-4  lg:px-0">
-        <h1 className="text-6xl font-title2 mb-4 lg:text-[9rem]">DATES</h1>
-        <div className="w-full flex flex-col  gap-36 rounded-lg mt-64 p-1  xl:mt-72 lg:gap-60">
+        <h6 className="text-6xl font-title2 mb-4 lg:text-[6rem]">DATES</h6>
+        <div className="w-full flex flex-col gap-40 rounded-lg p-2 mt-96 lg:gap-60">
           {events?.length > 0 ? (
             events?.map((event, index) => (
               <div
                 ref={addToRefs}
                 key={event?._id}
-                className={`w-full flex flex-col justify-center items-center lg:flex-row gap-4 lg:gap-32  ${
+                className={`w-full flex flex-col justify-center items-center lg:flex-row gap-4 lg:gap-24 lg:items-start  ${
                   index % 2 !== 0 ? "lg:flex-row-reverse" : ""
                 } `}
               >
-                <figure className={`max-w-[400px] w-[80%] self-center flex justify-start items-center md:w-[50%] md:max-w-none ${index % 2 !== 0 ? "justify-start" : "justify-end"} `}>
+                <figure
+                  className={`max-w-[400px] w-[80%] self-center flex justify-start items-center md:w-[50%] md:max-w-none ${
+                    index % 2 !== 0 ? "justify-start" : "justify-end "
+                  } `}
+                >
                   <img
-                    className="image-dates rounded-md opacity-0 w-full h-full max-w-[450px] object-cover object-center md:max-w-[300px]"
+                    className="image-dates rounded-md opacity-0 z-50 w-full h-full max-w-[450px] object-cover object-center md:max-w-[300px]"
                     src={flayer}
                     alt="img-flayer"
                   />
                 </figure>
-                <article className="article_dates text-sm w-full opacity-0 pl-2 font-title flex flex-col gap-1 text-stone-600 border md:w-[50%]">
-                  <h2 className="text-base font-title2 text-stone-500">
-                    {event?.title}
-                  </h2>
-                  <p className="mt-1 lg:mt-3">{event?.date}</p>
-                  <p>{event?.description}</p>
-                </article>
+                <div
+                  className={`w-full md:w-[50%] flex rounded-md ${
+                    index % 2 !== 0 ? "justify-end" : "justify-start"
+                  } `}
+                >
+                  <article
+                    className={`article_dates text-sm w-full opacity-0 py-2 pl-3 rounded-md font-title flex flex-col gap-1 text-stone-600 border max-w-md ${
+                      index % 2 !== 0
+                        ? "items-start"
+                        : "items-start justify-start"
+                    } `}
+                  >
+                    <h2 className="text-base font-title2 text-stone-500">
+                      {event?.title}
+                    </h2>
+                    <p className="mt-1 lg:mt-3">{event?.date}</p>
+                    <p>{event?.description}</p>
+                  </article>
+                </div>
               </div>
             ))
           ) : (
