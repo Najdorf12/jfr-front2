@@ -19,7 +19,7 @@ const CardDate = ({ event }) => {
         <p className="text-sm xl:text-sm">{description}</p>
       </div>
 
-      <div className="flex absolute right-6 top-7 gap-2 z-20 w-[20%] text-stone-500 text-nowrap justify-center items-center md:relative lg:gap-4 md:top-2 lg:text-lg lg:pb-12">
+      <div className="flex absolute right-6 top-5 gap-2 z-20 w-[20%] text-stone-500 text-nowrap justify-center items-center md:relative lg:gap-4 md:top-2 lg:text-lg lg:pb-12">
         <i className="bx bxs-cube-alt text-xl xl:text-4xl text-stone-300"></i>
         <p className="">{date}</p>
       </div>
