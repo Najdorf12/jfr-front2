@@ -93,18 +93,19 @@ const AllDatesPage = () => {
           </li>
         </ul>
       </nav>
-      <div className="w-full flex flex-col items-center justify-center mt-12  px-4 lg:px-0">
-        <article className=" w-full flex flex-col gap-28">
-          <h6 className="text-6xl font-title2 mb-4 lg:text-[6rem]">
-            Follow the journey
+      <div className="w-full flex flex-col items-center justify-center mt-12 px-4 lg:px-0 lg:mt-20">
+        <article className="text-balance w-full flex flex-col gap-28  lg:flex-row lg:justify-evenly">
+          <h6 className="text-6xl font-title2 mb-4 max-w-[400px] lg:text-[6rem] lg:max-w-[600px] relative">
+            <span className="absolute w-[100px] right-7 top-9 md:w-[200px] h-[1px] bg-red-500 lg:right-3 lg:top-14"></span>
+            Follow <br /> the journey
           </h6>
-          <p className="text-stone-600 max-w-[300px]">
+          <p className="text-stone-600 max-w-[200px] font-title self-end lg:mt-44 ">
             Some shows fade, others stick to the ribs. Here’s where we’ve left
             pieces of the music and taken some with us
           </p>
         </article>
 
-        <div className="w-full flex flex-col gap-40 rounded-lg p-2 mt-96 lg:gap-60">
+        <div className="w-full flex flex-col gap-40 rounded-lg p-2 mt-96 lg:mt-72 lg:gap-60">
           {events?.length > 0 ? (
             [...events].reverse()?.map((event, index) => (
               <div
