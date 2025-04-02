@@ -1,4 +1,5 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
+import { getEvents } from "../../config/handlers";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgDates from "/images2025/compressed/img-dates.jpg";
@@ -11,7 +12,45 @@ import CardDate from "./CardDate";
 gsap.registerPlugin(ScrollTrigger);
 
 const Dates = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [video, setVideo] = useState(false);
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const eventsData = await getEvents();
+        setEvents(eventsData);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+  useLayoutEffect(() => {
+    if (events.length === 0) return;
+  
+    const tl = gsap.timeline();
+    // ... tus otras animaciones
+  
+    // Animación para cada máscara
+    gsap.utils.toArray('.card-mask').forEach((mask, index) => {
+      tl.to(mask, {
+        width: "0px",
+        ease: "power1",
+        scrollTrigger: {
+          trigger: mask,
+          start:"top bottom",
+          end: windowWidth < 700 ? "-100px top" :  "top top",
+          scrub: true,
+        }
+      }, index * 0.3); // stagger
+    });
+  
+    // Refrescar ScrollTrigger después de configurar todo
+    ScrollTrigger.refresh();
+  }, [events]);
 
   useLayoutEffect(() => {
     const scales = [4, 5, 6, 8, 9, 7, 5];
@@ -64,10 +103,9 @@ const Dates = () => {
             </h4>
           </article>
           <div className="w-full flex flex-col gap-7 lg:gap-5 ">
-            <CardDate />
-            <CardDate />
-            <CardDate />
-            <CardDate />
+            {events?.slice(-4).map((event, i) => (
+              <CardDate key={i} event={event} />
+            ))}
           </div>
           <a href="/dates">
             <button className="border border-stone-300 font-title text-stone-400 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between relative xl:w-56 xl:py-1 2xl:w-56  duration-500 hover:border-stone-500">

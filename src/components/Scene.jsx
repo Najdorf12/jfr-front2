@@ -54,7 +54,7 @@ export function Sphere({ windowWidth, ...restprops }) {
           immediateRender: false,
         },
       })
-      .to("#card-mask", {
+     /*  .to(".card-mask", {
         width: windowWidth < 700 ? "0px" : "0px",
         ease: "power1",
         duration: 2.5,
@@ -66,7 +66,7 @@ export function Sphere({ windowWidth, ...restprops }) {
           scrub: true,
           immediateRender: false,
         },
-      });
+      }); */
   }, []);
 
   return (
