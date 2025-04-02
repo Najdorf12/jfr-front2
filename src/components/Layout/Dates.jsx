@@ -150,11 +150,11 @@ const Dates = () => {
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr2} alt="" loading="lazy" />
+              <img src={imgJfr2} alt="" loading="lazy" className=" rounded-lg" />
             </div>
           </div>
           <div className="el">
-            <div className="imageContainer bg-zinc-800">
+            <div className="imageContainer bg-zinc-800 rounded-lg">
               <p className="font-title2 flex items-center justify-center w-full h-full text-whiteCustom text-3xl lg:text-5xl">
                 JFR
               </p>
@@ -162,22 +162,22 @@ const Dates = () => {
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr4} alt="" loading="lazy" />
+              <img src={imgJfr4} alt="" loading="lazy" className=" rounded-lg"/>
             </div>
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr3} alt="" loading="lazy" />
+              <img src={imgJfr3} alt="" loading="lazy" className=" rounded-lg"/>
             </div>
           </div>
           <div className="el">
             <div className="imageContainer">
-              <img src={imgJfr6} alt="" loading="lazy" />
+              <img src={imgJfr6} alt="" loading="lazy" className=" rounded-lg"/>
             </div>
           </div>
           <div className="el">
-            <div className="imageContainer bg-red-500">
-              <p className="font-title2 flex items-center justify-center w-full h-full text-whiteCustom text-xl md:text-2xl">
+            <div className="imageContainer border border-zinc-800 rounded-lg">
+              <p className="font-title2 flex items-center justify-center w-full h-full text-red-400 text-xl md:text-2xl ">
                 JFR
               </p>
             </div>
