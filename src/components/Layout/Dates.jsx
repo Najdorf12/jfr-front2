@@ -103,7 +103,7 @@ const Dates = () => {
             </h4>
           </article>
           <div className="w-full flex flex-col gap-7 lg:gap-5 ">
-            {events?.slice(-4).map((event, i) => (
+            {events?.slice(-4)?.reverse()?.map((event, i) => (
               <CardDate key={i} event={event} />
             ))}
           </div>

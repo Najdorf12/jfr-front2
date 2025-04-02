@@ -93,11 +93,20 @@ const AllDatesPage = () => {
           </li>
         </ul>
       </nav>
-      <div className="w-full flex flex-col items-center justify-center mt-12 px-4  lg:px-0">
-        <h6 className="text-6xl font-title2 mb-4 lg:text-[6rem]">DATES</h6>
+      <div className="w-full flex flex-col items-center justify-center mt-12  px-4 lg:px-0">
+        <article className=" w-full flex flex-col gap-28">
+          <h6 className="text-6xl font-title2 mb-4 lg:text-[6rem]">
+            Follow the journey
+          </h6>
+          <p className="text-stone-600 max-w-[300px]">
+            Some shows fade, others stick to the ribs. Here’s where we’ve left
+            pieces of the music and taken some with us
+          </p>
+        </article>
+
         <div className="w-full flex flex-col gap-40 rounded-lg p-2 mt-96 lg:gap-60">
           {events?.length > 0 ? (
-            events?.map((event, index) => (
+            [...events].reverse()?.map((event, index) => (
               <div
                 ref={addToRefs}
                 key={event?._id}
