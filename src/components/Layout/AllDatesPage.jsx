@@ -94,12 +94,12 @@ const AllDatesPage = () => {
         </ul>
       </nav>
       <div className="w-full flex flex-col items-center justify-center mt-12 px-4 lg:px-0 lg:mt-20">
-        <article className="text-balance w-full flex flex-col px-2 gap-28  lg:flex-row lg:justify-evenly">
-          <h6 className="text-5xl font-title2 mb-4 max-w-[400px] lg:text-[6rem] lg:max-w-[600px] relative 2xl:text-[6.5rem] 2xl:max-w-[650px]">
+        <article className="text-balance w-full flex flex-col gap-28  lg:flex-row lg:justify-evenly">
+          <h6 className="text-5xl px-2 font-title2 mb-4 max-w-[400px] lg:text-[6rem] lg:max-w-[600px] relative 2xl:text-[6.5rem] 2xl:max-w-[650px]">
             <span className="absolute w-[120px] right-7 top-7 md:w-[200px] h-[1px] bg-red-500 lg:right-3 lg:top-14"></span>
             Follow <br /> the journey
           </h6>
-          <p className="text-stone-600 max-w-[200px] font-title self-end lg:mt-44 2xl:text-lg 2xl:max-w-[250px] ">
+          <p className="text-stone-600 max-w-[200px] text-sm font-title self-end lg:mt-44 2xl:text-lg 2xl:max-w-[250px] ">
             Some shows fade, others stick to the ribs. Here’s where we’ve left
             pieces of the music and taken some with us
           </p>
