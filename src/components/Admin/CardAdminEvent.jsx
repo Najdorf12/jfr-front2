@@ -6,11 +6,11 @@ const CardAdminEvent = ({ event, onDelete, onEdit }) => {
   const hasValidImages = images.length > 0 && images[0]?.secure_url;
   return (
     <div className="text-base  font-title text-balance w-full border border-zinc-700 pb-1 rounded-lg max-w-[400px] xl:pb-2">
-      <figure className="w-full h-[400px] overflow-hidden rounded-t-lg">
+      <figure className="w-full h-[500px] overflow-hidden rounded-t-lg">
         <img
           src={hasValidImages ? images[0].secure_url : imgAlternative}
           alt={title || "Event image"}
-          className="w-full h-[400px] object-cover object-center rounded-t-lg"
+          className="w-full h-[500px] object-cover object-center rounded-t-lg"
         />
       </figure>
       <article className="flex  flex-col gap-2 text-zinc-400 font-title ">

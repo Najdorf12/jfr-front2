@@ -131,12 +131,12 @@ const Dates = () => {
                 <div
                   onClick={handleShowVideo}
                   id="box-glass"
-                  className="flex items-center border-[0.1px] border-stone-500  justify-center  text-stone-400  gap-6 rounded-full font-title z-[100]  hover:text-whiteCustom cursor-pointer group duration-500 hover:border-whiteCustom"
+                  className="flex items-center border-[0.1px] border-stone-500  justify-center  text-stone-400  gap-4 rounded-full font-title z-[100]  hover:text-whiteCustom cursor-pointer group duration-500 hover:border-whiteCustom"
                 >
-                  <span className="text-[5px] pl-1 pr-[1px] pt-[1.4px]">
+                  <span className="text-[4px] pl-1 pr-[1px] pt-[1.4px]">
                     JFR Live Set
                   </span>
-                  <i className="bx bx-right-arrow text-[8px] pt-[1px] text-red-500 rounded-full group-hover: duration-500"></i>
+                  <i className="bx bx-right-arrow text-[6px] pr-[1px] pt-[1px] text-red-500 rounded-full group-hover: duration-500"></i>
                 </div>
               </div>
               {video ? (
