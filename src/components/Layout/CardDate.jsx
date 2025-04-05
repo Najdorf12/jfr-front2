@@ -12,17 +12,17 @@ const CardDate = ({ event }) => {
           className="w-full object-cover object-center rounded-md"
         />
       </figure>
-      <div className="flex flex-col w-[60%] justify-center gap-2 pl-8 md:pl-[5%]">
+      <div className="flex flex-col w-[60%] justify-center gap-2 pl-8 md:pl-[5%] ">
         <h6 className=" text-xl xl:text-2xl">{title}</h6>
         <p className="text-sm xl:text-sm">{location}</p>
-        <p className="text-sm max-w-[500px] xl:text-sm">{description}</p>
+        <p className="text-sm max-w-[500px] lg:mt-3 xl:text-sm">{description}</p>
         <p className="text-sm flex items-center gap-2  md:hidden">
           <i className="bx bxs-cube-alt text-xl xl:text-4xl text-stone-300"></i>
           {date}
         </p>
       </div>
 
-      <div className="hidden md:flex  absolute right-4 text-sm bottom-1 gap-1 z-20 w-[20%] text-stone-500 text-nowrap justify-center items-center md:relative lg:gap-4 md:top-2 lg:text-base lg:-top-8">
+      <div className="hidden md:flex  absolute right-4 text-sm bottom-1 gap-1 z-20 w-[20%] text-stone-500 text-nowrap justify-center items-center md:relative lg:gap-4 md:top-2 lg:text-base lg:-top-11">
         <i className="bx bxs-cube-alt text-xl xl:text-3xl text-stone-300"></i>
         <p className="">{date}</p>
       </div>

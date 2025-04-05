@@ -17,7 +17,7 @@ const CardAdminEvent = ({ event, onDelete, onEdit }) => {
         <h6 className="text-lg px-3 bg-zinc-700 text-whiteCustom py-2 lg:px-3 lg:py-3">
           {title}
         </h6>
-        <div className="px-4 mt-1 flex justify-between lg:px-3">
+        <div className="px-4 mt-1 flex justify-between lg:px-3 ">
           <p>{location}</p>
           <p className="font-text">{date}</p>
         </div>
