@@ -37,7 +37,7 @@ const AllDatesPage = () => {
         ease: "power1",
         scrollTrigger: {
           trigger: container,
-          start: windowWidth < 700 ? "10% bottom" : "20% bottom",
+          start: windowWidth < 700 ? "10% bottom" : "10% bottom",
           end: windowWidth < 700 ? "40% 40%" : "50% 50%",
           scrub: true,
           immediateRender: false,
@@ -46,20 +46,18 @@ const AllDatesPage = () => {
         },
       });
       gsap.to(article, {
-        y: windowWidth < 700 ? "-120" : "150",
-        x: windowWidth < 700 ? "100" : "",
+        y: windowWidth < 700 ? "-105" : "200",
         scale: windowWidth < 700 ? 1 : 1.1,
-
         opacity: 1,
         ease: "power1",
         scrollTrigger: {
           trigger: container,
           start: windowWidth < 700 ? "60% bottom" : "10% bottom",
-          end: windowWidth < 700 ? "50% 50%" : "50% 50%",
+          end: windowWidth < 700 ? "50% 50%" : "40% 40%",
           scrub: true,
           immediateRender: false,
-          /*    markers: true,
-          id: `article-anim-${index}`, */
+        /*   markers: true, */
+        /*   id: `article-anim-${index}`, */
         },
       });
     });
@@ -122,7 +120,11 @@ const AllDatesPage = () => {
                 >
                   <img
                     className="image-dates rounded-md opacity-0 z-50 w-full h-full max-w-[450px] object-cover object-center md:max-w-[300px] 2xl:max-w-[350px]"
-                    src={event?.images?.length < 0 ? flayer : event?.images[0]?.secure_url}
+                    src={
+                      event?.images?.length < 0
+                        ? flayer
+                        : event?.images[0]?.secure_url
+                    }
                     alt="img-flayer"
                   />
                 </figure>
@@ -132,17 +134,20 @@ const AllDatesPage = () => {
                   } `}
                 >
                   <article
-                    className={`article_dates text-sm w-full opacity-0 py-2 pl-3 rounded-md font-title flex flex-col gap-1 text-stone-600 border max-w-md 2xl:text-base lg:-mt-1 2xl:mt-12 ${
+                    className={`article_dates text-sm  w-full text-balance opacity-0 py-3 px-3 rounded-md font-title flex flex-col gap-1 border border-stone-700 max-w-md 2xl:text-base lg:mt-12 2xl:mt-12 ${
                       index % 2 !== 0
                         ? "items-start"
                         : "items-start justify-start"
                     } `}
                   >
-                    <h2 className="text-base font-title2 text-stone-500 2xl:text-lg ">
+                    <h2 className="text-base font-title2 text-stone-400 2xl:text-lg ">
                       {event?.title}
                     </h2>
-                    <p className="mt-1 lg:mt-3">{event?.date}</p>
-                    <p>{event?.description}</p>
+                    <div className="flex justify-between w-full my-1 gap-1 text-stone-500 lg:gap-2">
+                      <p className="">{event?.location}</p>
+                      <p className="">{event?.date}</p>
+                    </div>
+                    <p className="text-stone-600">{event?.description}</p>
                   </article>
                 </div>
               </div>
