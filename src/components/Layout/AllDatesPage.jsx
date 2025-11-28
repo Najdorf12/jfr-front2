@@ -1,7 +1,7 @@
 import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import { getEvents } from "../../config/handlers";
 import navimg from "../../assets/images/jfr-white.png";
-import flayer from "/flayer.jpg";
+import flayer from "/images2025/compressed/play03.jpeg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

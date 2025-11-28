@@ -1,9 +1,9 @@
-import flayer from "/flayer.jpg";
+import flayer from "/images2025/compressed/play03.jpeg";
 
 const CardDate = ({ event }) => {
   const { title, location, description, date, images } = event;
   return (
-    <div className="font-title relative text-balance text-sm pl-[6px] pb-3 md:pl-6 flex w-full text-stone-500 border-b border-stone-300 lg:text-base  xl:pl-[9%] xl:pr-[3%]">
+    <div className="font-title relative text-balance text-sm pl-[6px] pb-3 md:pl-6 flex w-full text-stone-500 border-b border-stone-300 lg:text-base  xl:pl-[9%] xl:pr-[3%] overflow-hidden">
       <div className="card-mask w-full h-full bg-zinc-700 absolute inset-0 z-50"></div>
       <figure className="text-stone-400 self-center w-[30%] md:w-[12%]">
         <img
