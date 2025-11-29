@@ -1,7 +1,3 @@
-import imgPlay01 from "/images2025/compressed/play01.jpeg";
-import imgPlay02 from "/images2025/compressed/play02.jpeg";
-import imgPlay03 from "/images2025/compressed/play03.jpeg";
-import imgPlay04 from "/images2025/compressed/play04.jpeg";
 
 const spotify = [
   {
