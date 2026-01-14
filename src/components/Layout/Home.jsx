@@ -1,9 +1,10 @@
-import imgHomeDesktop from "/images2025/compressed/img-home.jpg";
-import imgHomeMobile from "/images2025/compressed/img-home2.jpg";
+import imgHomeDesktop from "/images2025/new/74.jpg";
+
+import imgHomeMobile from "/images2025/new/74.webp";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import imgTitle from "../../assets/images/jfr-white.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Home = () => {
   const titleRef = useRef(null);
@@ -48,7 +49,7 @@ const Home = () => {
       <figure className="absolute inset-0 w-full flex justify-center items-center">
         <img
           src={imgHomeDesktop}
-          className="hidden lg:block w-full h-full object-cover object-center lg:object-[0,-35px]"
+          className="hidden lg:block w-full h-full object-cover object-center lg:object-[0,-50px]"
           alt="img-home"
         />
         <img
@@ -70,21 +71,21 @@ const Home = () => {
 
         <p
           ref={descriptionRef}
-          className="ml-6 mt-1 font-title text-sm text-stone-400 text-balance max-w-[600px] md:text-base lg:mt-0 xl:ml-12 xl:text-lg 2xl:text-xl"
+          className="ml-6 mt-1 font-title text-sm text-stone-300 text-balance max-w-[600px] md:text-base lg:mt-0 xl:ml-12 xl:text-lg 2xl:text-xl"
         >
           Argentine DJ and producer, crafting soulful <br />
           sounds for the world’s most iconic labels and stages.
         </p>
         <div className="flex items-center gap-6 md:gap-8 text-stone-500 font-title ml-5 mt-6 lg:mt-9 xl:ml-12 text-lg lg:gap-10 2xl:text-xl">
           <a ref={btnHome1} href="#third_section">
-            <button className="border border-red-600 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:text-whiteCustom duration-500 hover:border-whiteCustom">
+            <button className="border border-red-600 text-stone-100  rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:text-whiteCustom duration-500 hover:border-whiteCustom">
               Dates
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
             </button>
           </a>
 
           <a ref={btnHome2} href="#contact_section">
-            <button className="border border-stone-500 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:text-whiteCustom duration-500 hover:border-whiteCustom">
+            <button className="border border-stone-100 text-stone-100 rounded-full py-[2px] w-44 pl-4 pr-2 flex items-center justify-between md:shadow-md shadow-zinc-800 relative xl:w-52 2xl:w-56 hover:text-whiteCustom duration-500 hover:border-whiteCustom">
               Contact
               <i className="bx bx-chevron-right text-2xl text-red-500 absolute right-1"></i>
             </button>

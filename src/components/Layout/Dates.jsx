@@ -2,11 +2,11 @@ import { useLayoutEffect, useState, useEffect } from "react";
 import { getEvents } from "../../config/handlers";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import imgDates from "/images2025/compressed/img-dates.jpg";
-import imgJfr2 from "/images2025/compressed/07.webp";
-import imgJfr3 from "/images2025/compressed/02.webp";
-import imgJfr6 from "/images2025/compressed/03.webp";
-import imgJfr4 from "/images2025/compressed/08.jpg";
+import imgDates from "/images2025/new/54.jpg";
+import imgJfr2 from "/images2025/new/86.webp";
+import imgJfr4 from "/images2025/new/91.webp";
+import imgJfr6 from "/images2025/new/55.webp";
+import imgJfr3 from "/images2025/new/48.webp";
 import CardDate from "./CardDate";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -127,14 +127,14 @@ const Dates = () => {
         <div className="sticky">
           <div className="el z-50">
             <div className="imageContainer relative">
-              <div className="absolute inset-0  flex items-start mt-3  justify-center">
+              <div className="absolute inset-0   flex items-end mb-3  justify-center">
                 <div
                   onClick={handleShowVideo}
                   id="box-glass"
                   className="flex items-center border-[0.1px] border-stone-500  justify-center  text-stone-400  gap-4 rounded-full font-title z-[100]  hover:text-whiteCustom cursor-pointer group duration-500 hover:border-whiteCustom"
                 >
-                  <span className="text-[4px] pl-1 pr-[1px] pt-[1.4px]">
-                    JFR Live Set
+                  <span className="text-[5px] font-bold tracking-widest text-stone-100 pl-1 pr-[1px] pt-[1.4px]">
+                    Watch JFR Live Set
                   </span>
                   <i className="bx bx-right-arrow text-[6px] pr-[1px] pt-[1px] text-red-500 rounded-full group-hover: duration-500"></i>
                 </div>
