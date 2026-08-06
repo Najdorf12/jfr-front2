@@ -73,8 +73,9 @@ const Home = () => {
           ref={descriptionRef}
           className="ml-6 mt-1 font-title text-sm text-stone-300 text-balance max-w-[600px] md:text-base lg:mt-0 xl:ml-12 xl:text-lg 2xl:text-xl"
         >
-          Argentine DJ and producer, crafting soulful <br />
-          sounds for the world’s most iconic labels and stages.
+          Argentine DJ and producer JFR is a true dancefloor <br />
+          specialist, known for his high-energy sets and instinctive <br />
+          ability to read a crowd.
         </p>
         <div className="flex items-center gap-6 md:gap-8 text-stone-500 font-title ml-5 mt-6 lg:mt-9 xl:ml-12 text-lg lg:gap-10 2xl:text-xl">
           <a ref={btnHome1} href="#third_section">

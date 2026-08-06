@@ -38,14 +38,12 @@ const Bio = () => {
           className="w-[40%] lg:w-[40%] h-[1px] bg-stone-300"
         ></div>
         <p className="text-stone-400 px-3 text-center max-w-[600px] lg:max-w-[750px] text-balance font-title text-sm z-50 2xl:text-base 2xl:max-w-[1000px]">
-          JFR has an impressive catalog of productions on labels such as All Day
-          I Dream, Anjunadeep, Musique de Lune, Clubsonica and more. After
-          living for 5 years in Europe, where he played in the best clubs of the
-          continent, JFR has returned to live in Mendoza, Argentina, and has
-          resumed his tour of the best clubs in South America. JFR's soulful
-          sounds have received the support of industry icons such as Tony
-          McGuinness, Lee Burridge, Hernan Cattaneo and Nick Warren, among
-          others.
+          After more than a decade behind the decks, he has performed across
+          nearly every major club circuit in Argentina as well as throughout
+          Europe and internationally—from Miami to Pakistan. Never confined
+          to a single genre, JFR seamlessly blends melodic house, progressive
+          and techno, delivering dynamic, unpredictable sets built for the
+          club.
         </p>
         
       </article>

@@ -36,9 +36,11 @@ const Contact = () => {
               behind the decks
             </p>
             <p className="relative mt-7 text-sm font-title text-balance flex justify-center items-center max-w-[400px] text-stone-700 md:max-w-[900px] lg:mt-9 lg:text-lg 2xl:text-xl 2xl:mt-10">
-              He is also a professor of electronic music production, Label
-              Manager of Musique de Lune and founder of his own label and the
-              popular radio series Secret Feelings
+              Never confined to a single genre, JFR's sets move effortlessly
+              through melodic house, progressive and techno, always adapting
+              to the moment while maintaining a powerful, high-energy groove.
+              Every performance is unique, driven by instinct, emotion and an
+              unwavering connection with the dancefloor.
             </p>
             <div className="w-[40%] h-[1px] mt-7 bg-zinc-700 md:w-[15%] lg:mt-10 2xl:mt-12"></div>
           </div>
