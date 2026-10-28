@@ -1,6 +1,6 @@
-import imgHomeDesktop from "/images2025/new/74.jpg";
+import imgHomeDesktop from "/images2025/new/2026-1.jpg";
 
-import imgHomeMobile from "/images2025/new/74.webp";
+import imgHomeMobile from "/images2025/new/2026-1.jpg";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import imgTitle from "../../assets/images/jfr-white.png";
@@ -49,7 +49,7 @@ const Home = () => {
       <figure className="absolute inset-0 w-full flex justify-center items-center">
         <img
           src={imgHomeDesktop}
-          className="hidden lg:block w-full h-full object-cover object-center lg:object-[0,-50px]"
+          className="hidden lg:block w-full h-full object-cover object-center lg:object-[0,-500px] xl:object-[0,-700px]"
           alt="img-home"
         />
         <img

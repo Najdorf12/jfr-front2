@@ -3,8 +3,8 @@ import { getEvents } from "../../config/handlers";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgDates from "/images2025/new/54.jpg";
-import imgJfr2 from "/images2025/new/86.webp";
-import imgJfr4 from "/images2025/new/91.webp";
+import imgJfr2 from "/images2025/new/2026-2.jpg";
+import imgJfr4 from "/images2025/new/2026-3.jpg";
 import imgJfr6 from "/images2025/new/55.webp";
 import imgJfr3 from "/images2025/new/48.webp";
 import CardDate from "./CardDate";
@@ -48,7 +48,7 @@ const Dates = () => {
             scrub: true,
           },
         },
-        index * 0.3
+        index * 0.3,
       ); // stagger
     });
 
@@ -144,9 +144,12 @@ const Dates = () => {
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/XbopdG7asHI?start=12&autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    src="https://www.youtube.com/embed/Sk2HU_7HQEY?start=0&autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1"
+
+                    // title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    // referrerpolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   ></iframe>
                 </div>
